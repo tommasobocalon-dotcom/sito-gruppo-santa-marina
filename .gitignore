@@ -1,0 +1,9 @@
+# Video (troppo grande per GitHub — max 100 MB)
+assets/img/*.mp4
+assets/img/*.mov
+assets/img/*.avi
+assets/img/*.webm
+
+# OS
+.DS_Store
+Thumbs.db
