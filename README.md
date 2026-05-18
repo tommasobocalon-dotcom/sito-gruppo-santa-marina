@@ -15,7 +15,7 @@ gruppo-santa-marina/
 │   ├── js/
 │   │   └── main.js         → Interattività (menu mobile, ecc.)
 │   └── img/
-│       └── logo.png        → Logo aziendale
+│       └── logo.webp       → Logo aziendale (convertito in WebP)
 ├── pages/
 │   ├── retail.html                              → Categoria: spazi commerciali
 │   ├── hospitality.html                         → Categoria: strutture ricettive
@@ -41,7 +41,11 @@ gruppo-santa-marina/
 │   │   ├── hotel-laguna-torcello.html
 │   │   ├── locanda-del-doge.html
 │   │   ├── pensione-veneziana.html
-│   │   └── residenza-epoca-accademia.html
+│   │   ├── residenza-epoca-accademia.html
+│   │   ├── hotel-tre-stelle.html               → slider 4 foto, KEY MONEY €1.100.000
+│   │   ├── hotel-canal-grande.html             → slider 5 foto, €50.000.000
+│   │   ├── hotel-una-stella.html               → slider 4 foto, KEY MONEY €450.000
+│   │   └── hotel-palazzo-terracielo.html       → slider 5 foto, €8.500.000
 │   └── attivita-commerciali/
 │       ├── merceria-orologio.html              → slider 4 foto
 │       ├── campo-san-bartolomeo.html           → slider 4 foto
@@ -150,6 +154,7 @@ Questa regola è definita in `CLAUDE.md` e nell'hook Stop in `.claude/settings.j
 | Animazioni AOS scroll | ✅ | CDN, init in main.js, `data-aos` su sezioni homepage |
 | Switch lingua IT/EN | ✅ | `.t-it`/`.t-en` spans, localStorage, toggle in navbar |
 | Filtri listing pages | ✅ | `data-tipo`, `data-zona`, `data-prezzo-min` su ogni card |
+| Ottimizzazione immagini WebP | ✅ | 237 immagini convertite da JPG/PNG a WebP (qualità 85) |
 
 ## Prossimi step
 
@@ -161,6 +166,7 @@ Questa regola è definita in `CLAUDE.md` e nell'hook Stop in `.claude/settings.j
 - [x] Animazioni AOS
 - [x] Switch lingua IT/EN (tutte le pagine)
 - [x] Filtri nelle pagine categoria
+- [x] Ottimizzazione immagini WebP (237 file convertiti)
 - [ ] Configurare Formspree con ID account reale
 - [ ] SEO: meta description, Open Graph, sitemap.xml
 - [ ] Deploy (hosting + dominio)

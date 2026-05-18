@@ -118,5 +118,6 @@ Font UI/body: Inter (400 regular, 600 semibold)
 - Le immagini delle proprietà sono **placeholder** (background scuro). Vanno sostituite con foto reali dentro `.prop-card__image` e `.detail-hero`
 - Il form contatti non ha backend: va collegato a un servizio (es. Formspree, Netlify Forms)
 - `pages/immobile.html` è un template statico: in produzione andrà reso dinamico (es. con parametri URL o CMS)
-- Il logo (`assets/img/logo.png`) è scaricato da Figma e ha scadenza; va sostituito con il file definitivo
+- Il logo (`assets/img/logo.webp`) è in formato WebP (convertito da PNG); va sostituito con il file definitivo se necessario
+- Tutte le immagini del sito sono in formato **WebP** (qualità 85, convertite con Python Pillow); non aggiungere JPG/PNG senza convertirli
 - I percorsi relativi nelle pagine in `pages/` usano `../` per risalire alla radice (es. `../assets/css/style.css`, `../index.html`)

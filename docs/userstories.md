@@ -83,8 +83,9 @@ Come **investitore internazionale**, voglio che il sito trasmetta lusso ed esclu
 
 ## Accessibilità e performance
 
-**US-21** 🟡  
-Come **utente con connessione lenta**, voglio che il sito si carichi rapidamente anche senza immagini pesanti, così da non abbandonare la navigazione prima di vedere i contenuti.
+**US-21** 🟡 ✅  
+Come **utente con connessione lenta**, voglio che il sito si carichi rapidamente anche senza immagini pesanti, così da non abbandonare la navigazione prima di vedere i contenuti.  
+- Tutte le 237 immagini convertite in WebP (qualità 85) con Python Pillow — riduzione dimensioni significativa rispetto a JPG/PNG originali
 
 **US-22** 🟡 ✅  
 Come **utente da tablet**, voglio che il layout si adatti correttamente alle dimensioni intermedie, così da avere una buona esperienza di navigazione anche su iPad.

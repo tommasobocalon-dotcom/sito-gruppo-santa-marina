@@ -80,7 +80,7 @@ Realizzare un sito web istituzionale per **Gruppo Santa Marina Immobiliare**, pu
 | RNF-03 | Accessibilità | Tag semantici, attributi `alt`, contrasto colori adeguato |
 | RNF-04 | SEO | Meta title, meta description, Open Graph per ogni pagina |
 | RNF-05 | Compatibilità | Chrome, Firefox, Safari, Edge — ultime 2 versioni |
-| RNF-06 | Velocità caricamento | Immagini compresse, Google Fonts con `display=swap` |
+| RNF-06 | Velocità caricamento | Immagini in formato WebP (qualità 85), Google Fonts con `display=swap` |
 
 ---
 
@@ -126,6 +126,7 @@ Ancora fuori scope:
 | RF-14 | Filtri per tipo, zona, prezzo nelle pagine categoria | Media | ✅ |
 | RF-15 | Scroll-to-top button | Bassa | ✅ |
 | RF-16 | Animazioni AOS allo scroll | Bassa | ✅ |
+| RF-17 | Ottimizzazione immagini WebP | Media | ✅ (237 immagini convertite) |
 
 ---
 
