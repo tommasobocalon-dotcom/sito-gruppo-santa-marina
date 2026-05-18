@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gruppo Santa Marina — Immobiliare Veneziano</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body>
 
@@ -19,9 +20,9 @@
       <span></span><span></span><span></span>
     </button>
     <nav class="navbar__links" id="nav-links">
-      <a href="#">SERVIZI</a>
-      <a href="#chi-siamo">CHI SIAMO</a>
-      <a href="#contatti">CONTATTI</a>
+      <a href="#"><span class="t-it">SERVIZI</span><span class="t-en">SERVICES</span></a>
+      <a href="#chi-siamo"><span class="t-it">CHI SIAMO</span><span class="t-en">ABOUT US</span></a>
+      <a href="#contatti"><span class="t-it">CONTATTI</span><span class="t-en">CONTACT</span></a>
     </nav>
   </nav>
 
@@ -34,67 +35,127 @@
     <div class="hero__cards">
       <a href="pages/retail.html" class="hero__card">
         <div class="hero__card-bar"></div>
-        <p class="hero__card-title">ATTIVITÀ<br>COMMERCIALI</p>
-        <p class="hero__card-desc">Negozi, e spazi commerciali nei sestieri storici</p>
-        <p class="hero__card-cta">Esplora →</p>
+        <p class="hero__card-title">
+          <span class="t-it">ATTIVITÀ<br>COMMERCIALI</span>
+          <span class="t-en">COMMERCIAL<br>PROPERTIES</span>
+        </p>
+        <p class="hero__card-desc">
+          <span class="t-it">Negozi, e spazi commerciali nei sestieri storici</span>
+          <span class="t-en">Shops and commercial spaces in the historic districts</span>
+        </p>
+        <p class="hero__card-cta">
+          <span class="t-it">Esplora →</span><span class="t-en">Explore →</span>
+        </p>
       </a>
       <a href="pages/hospitality.html" class="hero__card">
         <div class="hero__card-bar"></div>
         <p class="hero__card-title">RETAIL<br>HOSPITALITY</p>
-        <p class="hero__card-desc">Hotel boutique, locande di charme e strutture di pregio</p>
-        <p class="hero__card-cta">Esplora →</p>
+        <p class="hero__card-desc">
+          <span class="t-it">Hotel boutique, locande di charme e strutture di pregio</span>
+          <span class="t-en">Boutique hotels, charming inns and prestigious venues</span>
+        </p>
+        <p class="hero__card-cta">
+          <span class="t-it">Esplora →</span><span class="t-en">Explore →</span>
+        </p>
       </a>
       <a href="pages/residenziale.html" class="hero__card">
         <div class="hero__card-bar"></div>
-        <p class="hero__card-title">PALAZZI E<br>RESIDENZE</p>
-        <p class="hero__card-desc">Palazzi d'epoca, appartamenti e residenze esclusive</p>
-        <p class="hero__card-cta">Esplora →</p>
+        <p class="hero__card-title">
+          <span class="t-it">PALAZZI E<br>RESIDENZE</span>
+          <span class="t-en">PALACES &amp;<br>RESIDENCES</span>
+        </p>
+        <p class="hero__card-desc">
+          <span class="t-it">Palazzi d'epoca, appartamenti e residenze esclusive</span>
+          <span class="t-en">Historic palaces, apartments and exclusive residences</span>
+        </p>
+        <p class="hero__card-cta">
+          <span class="t-it">Esplora →</span><span class="t-en">Explore →</span>
+        </p>
       </a>
     </div>
   </section>
 
   <!-- Chi Siamo -->
   <section class="chi-siamo" id="chi-siamo">
-    <div class="chi-siamo__left">
+    <div class="chi-siamo__left" data-aos="fade-right">
       <div class="chi-siamo__bar"></div>
-      <p class="chi-siamo__quote">«Il nostro gruppo porta l'eccellenza veneziana nel mondo.»</p>
+      <p class="chi-siamo__quote">
+        <span class="t-it">«Il nostro gruppo porta l'eccellenza veneziana nel mondo.»</span>
+        <span class="t-en">«Our group brings Venetian excellence to the world.»</span>
+      </p>
     </div>
-    <div class="chi-siamo__right">
-      <p class="chi-siamo__label">CHI SIAMO</p>
+    <div class="chi-siamo__right" data-aos="fade-left" data-aos-delay="100">
+      <p class="chi-siamo__label">
+        <span class="t-it">CHI SIAMO</span><span class="t-en">ABOUT US</span>
+      </p>
       <div class="chi-siamo__divider"></div>
-      <h2 class="chi-siamo__heading">Il Nostro Gruppo<br>e l'Eccellenza<br>Veneziana</h2>
-      <p class="chi-siamo__text">Gruppo Santa Marina Immobiliare è il punto di riferimento per chi cerca il meglio del mercato immobiliare veneziano. Selezioniamo con cura le proprietà più esclusive della Serenissima, offrendo un servizio personalizzato e di altissimo livello.</p>
+      <h2 class="chi-siamo__heading">
+        <span class="t-it">Il Nostro Gruppo<br>e l'Eccellenza<br>Veneziana</span>
+        <span class="t-en">Our Group<br>and Venetian<br>Excellence</span>
+      </h2>
+      <p class="chi-siamo__text">
+        <span class="t-it">Gruppo Santa Marina Immobiliare è il punto di riferimento per chi cerca il meglio del mercato immobiliare veneziano. Selezioniamo con cura le proprietà più esclusive della Serenissima, offrendo un servizio personalizzato e di altissimo livello.</span>
+        <span class="t-en">Gruppo Santa Marina Immobiliare is the reference point for those seeking the best of the Venetian real estate market. We carefully select the most exclusive properties in La Serenissima, offering a personalised and exceptionally high-level service.</span>
+      </p>
     </div>
   </section>
 
   <!-- Contatti -->
   <section class="contatti" id="contatti">
-    <div class="contatti__form-col">
-      <p class="contatti__label">CONTATTACI</p>
-      <h2 class="contatti__heading">Restiamo in contatto</h2>
-      <p class="contatti__sub">Un nostro consulente ti risponderà entro 24 ore.</p>
-      <form action="#" method="post">
+    <div class="contatti__form-col" data-aos="fade-right">
+      <p class="contatti__label">
+        <span class="t-it">CONTATTACI</span><span class="t-en">CONTACT US</span>
+      </p>
+      <h2 class="contatti__heading">
+        <span class="t-it">Restiamo in contatto</span>
+        <span class="t-en">Get in touch</span>
+      </h2>
+      <p class="contatti__sub">
+        <span class="t-it">Un nostro consulente ti risponderà entro 24 ore.</span>
+        <span class="t-en">One of our consultants will respond within 24 hours.</span>
+      </p>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="post">
         <div class="form-row">
-          <input class="form-field" type="text" name="nome" placeholder="Nome e Cognome">
-          <input class="form-field" type="tel" name="telefono" placeholder="Telefono">
+          <input class="form-field" type="text" name="nome" placeholder="Nome e Cognome" data-placeholder-en="Full Name">
+          <input class="form-field" type="tel" name="telefono" placeholder="Telefono" data-placeholder-en="Phone">
         </div>
-        <input class="form-field form-field--wide" type="email" name="email" placeholder="Indirizzo Email">
-        <textarea class="form-field form-field--wide form-field--textarea" name="messaggio" placeholder="Il tuo messaggio…"></textarea>
-        <button class="form-submit" type="submit">INVIA RICHIESTA</button>
+        <input class="form-field form-field--wide" type="email" name="email" placeholder="Indirizzo Email" data-placeholder-en="Email Address">
+        <textarea class="form-field form-field--wide form-field--textarea" name="messaggio" placeholder="Il tuo messaggio…" data-placeholder-en="Your message…"></textarea>
+        <button class="form-submit" type="submit">
+          <span class="t-it">INVIA RICHIESTA</span><span class="t-en">SEND REQUEST</span>
+        </button>
       </form>
-      <p class="form-legal">Inviando accetti la nostra Privacy Policy e il trattamento dei dati personali ai sensi del GDPR.</p>
+      <p class="form-legal">
+        <span class="t-it">Inviando accetti la nostra Privacy Policy e il trattamento dei dati personali ai sensi del GDPR.</span>
+        <span class="t-en">By submitting you accept our Privacy Policy and the processing of personal data under GDPR.</span>
+      </p>
     </div>
-    <div class="contatti__info-col">
-      <div class="contatti__map"></div>
-      <p class="contatti__map-label">VENEZIA - SANTA MARINA</p>
+    <div class="contatti__info-col" data-aos="fade-left" data-aos-delay="100">
+      <div class="contatti__map">
+        <iframe
+          src="https://maps.google.com/maps?q=Campo+Santa+Marina,+Venezia&amp;output=embed&amp;hl=it&amp;z=16"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Gruppo Santa Marina — Campo Santa Marina, Venezia">
+        </iframe>
+      </div>
+      <p class="contatti__map-label">VENEZIA — SANTA MARINA</p>
       <div class="contatti__office">
-        <p class="contatti__office-title">Sede Principale — Venezia</p>
+        <p class="contatti__office-title">
+          <span class="t-it">Sede Principale — Venezia</span>
+          <span class="t-en">Main Office — Venice</span>
+        </p>
         <div class="contatti__info-row">
-          <span class="contatti__info-key">INDIRIZZO</span>
+          <span class="contatti__info-key">
+            <span class="t-it">INDIRIZZO</span><span class="t-en">ADDRESS</span>
+          </span>
           <span class="contatti__info-val">Castello, 5893<br>30122 Venezia</span>
         </div>
         <div class="contatti__info-row">
-          <span class="contatti__info-key">TELEFONO</span>
+          <span class="contatti__info-key">
+            <span class="t-it">TELEFONO</span><span class="t-en">PHONE</span>
+          </span>
           <span class="contatti__info-val contatti__info-val--gold">+39 041 56492500</span>
         </div>
         <div class="contatti__info-row">
@@ -102,8 +163,13 @@
           <span class="contatti__info-val">info@santamarinaimmobiliare.it</span>
         </div>
         <div class="contatti__info-row">
-          <span class="contatti__info-key">ORARI</span>
-          <span class="contatti__info-val">Lun – Ven &nbsp;9:00 – 19:00<br>Sabato &nbsp;10:00 – 13:00</span>
+          <span class="contatti__info-key">
+            <span class="t-it">ORARI</span><span class="t-en">HOURS</span>
+          </span>
+          <span class="contatti__info-val">
+            <span class="t-it">Lun – Ven &nbsp;9:00 – 19:00<br>Sabato &nbsp;10:00 – 13:00</span>
+            <span class="t-en">Mon – Fri &nbsp;9:00 – 19:00<br>Saturday &nbsp;10:00 – 13:00</span>
+          </span>
         </div>
       </div>
     </div>
@@ -116,31 +182,64 @@
         <p class="footer__brand-name">GRUPPO SANTA MARINA</p>
         <p class="footer__brand-sub">Immobiliare</p>
         <div class="footer__brand-divider"></div>
-        <p class="footer__brand-desc">Il punto di riferimento<br>per l'immobiliare d'eccellenza<br>nel cuore della Serenissima.</p>
+        <p class="footer__brand-desc">
+          <span class="t-it">Il punto di riferimento<br>per l'immobiliare d'eccellenza<br>nel cuore della Serenissima.</span>
+          <span class="t-en">The reference point<br>for excellent real estate<br>in the heart of Venice.</span>
+        </p>
       </div>
       <div class="footer__col">
-        <p class="footer__col-title">IMMOBILI</p>
+        <p class="footer__col-title">
+          <span class="t-it">IMMOBILI</span><span class="t-en">PROPERTIES</span>
+        </p>
         <div class="footer__col-divider"></div>
-        <a href="pages/residenziale.html" class="footer__col-link">Palazzi Storici</a>
-        <a href="pages/residenziale.html" class="footer__col-link">Ville &amp; Residenze</a>
-        <a href="pages/residenziale.html" class="footer__col-link">Appartamenti</a>
-        <a href="pages/retail.html" class="footer__col-link">Retail</a>
-        <a href="#" class="footer__col-link">Investimenti</a>
-        <a href="pages/hospitality.html" class="footer__col-link">Hospitality</a>
+        <a href="pages/residenziale.html" class="footer__col-link">
+          <span class="t-it">Palazzi Storici</span><span class="t-en">Historic Palaces</span>
+        </a>
+        <a href="pages/residenziale.html" class="footer__col-link">
+          <span class="t-it">Ville &amp; Residenze</span><span class="t-en">Villas &amp; Residences</span>
+        </a>
+        <a href="pages/residenziale.html" class="footer__col-link">
+          <span class="t-it">Appartamenti</span><span class="t-en">Apartments</span>
+        </a>
+        <a href="pages/retail.html" class="footer__col-link">
+          <span class="t-it">Attività Commerciali</span><span class="t-en">Commercial Properties</span>
+        </a>
+        <a href="#" class="footer__col-link">
+          <span class="t-it">Investimenti</span><span class="t-en">Investments</span>
+        </a>
+        <a href="pages/hospitality.html" class="footer__col-link">
+          <span class="t-it">Retail Hospitality</span><span class="t-en">Retail Hospitality</span>
+        </a>
       </div>
       <div class="footer__col">
-        <p class="footer__col-title">SERVIZI</p>
+        <p class="footer__col-title">
+          <span class="t-it">SERVIZI</span><span class="t-en">SERVICES</span>
+        </p>
         <div class="footer__col-divider"></div>
-        <a href="#" class="footer__col-link">Consulenza immobiliare</a>
-        <a href="#" class="footer__col-link">Compravendita</a>
-        <a href="#" class="footer__col-link">Locazioni</a>
-        <a href="#" class="footer__col-link">Gestione Patrimonio</a>
-        <a href="#" class="footer__col-link">Proprietà esclusive</a>
+        <a href="#" class="footer__col-link">
+          <span class="t-it">Consulenza immobiliare</span><span class="t-en">Real Estate Advisory</span>
+        </a>
+        <a href="#" class="footer__col-link">
+          <span class="t-it">Compravendita</span><span class="t-en">Sales</span>
+        </a>
+        <a href="#" class="footer__col-link">
+          <span class="t-it">Locazioni</span><span class="t-en">Rentals</span>
+        </a>
+        <a href="#" class="footer__col-link">
+          <span class="t-it">Gestione Patrimonio</span><span class="t-en">Asset Management</span>
+        </a>
+        <a href="#" class="footer__col-link">
+          <span class="t-it">Proprietà esclusive</span><span class="t-en">Exclusive Properties</span>
+        </a>
         <a href="#" class="footer__col-link">Virtual Tour</a>
-        <a href="#" class="footer__col-link">Aste Immobiliari</a>
+        <a href="#" class="footer__col-link">
+          <span class="t-it">Aste Immobiliari</span><span class="t-en">Real Estate Auctions</span>
+        </a>
       </div>
       <div class="footer__col">
-        <p class="footer__col-title">SEDE OPERATIVA</p>
+        <p class="footer__col-title">
+          <span class="t-it">SEDE OPERATIVA</span><span class="t-en">OFFICE</span>
+        </p>
         <div class="footer__col-divider"></div>
         <p class="footer__col-address">Venezia - Castello 5893<br>Campo Santa Marina<br>Cap 30122</p>
       </div>
@@ -148,14 +247,15 @@
     <div class="footer__legal">
       <p class="footer__legal-copy">© 2026 Gruppo Santa Marina Immobiliare AENA S.r.l. — P.IVA 04716630274 — REA VE-443754</p>
       <div class="footer__legal-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Cookie Policy</a>
-        <a href="#">Note Legali</a>
+        <a href="#"><span class="t-it">Privacy Policy</span><span class="t-en">Privacy Policy</span></a>
+        <a href="#"><span class="t-it">Cookie Policy</span><span class="t-en">Cookie Policy</span></a>
+        <a href="#"><span class="t-it">Note Legali</span><span class="t-en">Legal Notes</span></a>
         <a href="#">GDPR</a>
       </div>
     </div>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

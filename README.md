@@ -17,17 +17,41 @@ gruppo-santa-marina/
 │   └── img/
 │       └── logo.png        → Logo aziendale
 ├── pages/
-│   ├── retail.html                         → Categoria: spazi commerciali
-│   ├── hospitality.html                    → Categoria: strutture ricettive
-│   ├── residenziale.html                   → Categoria: immobili residenziali
-│   ├── immobile.html                       → Template dettaglio immobile
-│   └── residenziale/
-│       ├── residenza-san-polo.html         → Residenza San Polo (slider 15 foto, giardino 500 m²)
-│       ├── palazzo-venier.html
-│       ├── ca-grimani-loft.html
-│       ├── residenza-torcello.html
-│       ├── appartamento-rialto.html
-│       └── attico-san-marco.html
+│   ├── retail.html                              → Categoria: spazi commerciali
+│   ├── hospitality.html                         → Categoria: strutture ricettive
+│   ├── residenziale.html                        → Categoria: immobili residenziali
+│   ├── immobile.html                            → Template dettaglio immobile
+│   ├── residenziale/
+│   │   ├── residenza-san-polo.html              → slider 15 foto
+│   │   ├── residenza-santanzolo.html            → slider 15 foto
+│   │   ├── residenza-cortina.html               → slider 15 foto
+│   │   ├── isola-di-crevan.html
+│   │   ├── residenza-san-leonardo.html
+│   │   ├── villa-ca-barbero.html
+│   │   ├── palazzo-venier.html
+│   │   ├── ca-grimani-loft.html
+│   │   ├── residenza-torcello.html
+│   │   ├── appartamento-rialto.html
+│   │   └── attico-san-marco.html
+│   ├── hospitality/
+│   │   ├── calle-xxii-marzo.html               → slider 5 foto
+│   │   ├── boutique-via-moda.html              → slider 4 foto
+│   │   ├── bb-palazzo-grimani.html
+│   │   ├── boutique-hotel-dorsoduro.html
+│   │   ├── hotel-laguna-torcello.html
+│   │   ├── locanda-del-doge.html
+│   │   ├── pensione-veneziana.html
+│   │   └── residenza-epoca-accademia.html
+│   └── attivita-commerciali/
+│       ├── merceria-orologio.html              → slider 4 foto
+│       ├── campo-san-bartolomeo.html           → slider 4 foto
+│       ├── marzaria-san-salvador.html          → slider 4 foto
+│       ├── bottega-arte.html
+│       ├── flagship-store-frezzeria.html
+│       ├── locale-cannaregio.html
+│       ├── negozio-canal-grande.html
+│       ├── showroom-rialto.html
+│       └── spazio-espositivo-murano.html
 └── docs/
     ├── prd.md              → Product Requirements Document
     └── userstories.md      → User Stories
@@ -41,6 +65,9 @@ gruppo-santa-marina/
 - CSS3 puro con custom properties (nessun framework)
 - JavaScript vanilla
 - Google Fonts: **Cormorant Garamond** + **Inter**
+- **AOS** (Animate On Scroll) v2.3.4 — via CDN, no build step
+- **Formspree** — form contatti (placeholder endpoint, da configurare)
+- **Google Maps** — embed iframe senza API key
 
 ---
 
@@ -111,11 +138,29 @@ Ogni volta che Claude Code modifica file di progetto, i file MD vengono aggiorna
 
 Questa regola è definita in `CLAUDE.md` e nell'hook Stop in `.claude/settings.json`.
 
+## Funzionalità aggiunte (v1.1)
+
+| Feature | Stato | Note |
+|---|---|---|
+| Google Maps embed | ✅ | iframe senza API key, sezione contatti |
+| Form Formspree | ✅ | endpoint placeholder `YOUR_FORM_ID` da sostituire |
+| Cookie banner GDPR | ✅ | iniettato via JS, preferenza in localStorage |
+| Scroll-to-top button | ✅ | iniettato via JS, visibile dopo 400px di scroll |
+| Animazioni AOS scroll | ✅ | CDN, init in main.js, `data-aos` su sezioni homepage |
+| Switch lingua IT/EN | ✅ | `.t-it`/`.t-en` spans, localStorage, toggle in navbar |
+| Filtri listing pages | ✅ | `data-tipo`, `data-zona`, `data-prezzo-min` su ogni card |
+
 ## Prossimi step
 
 - [x] Layout responsive (6 breakpoint: 390px → 1440px+)
+- [x] Google Maps nella sezione contatti
+- [x] Form contatti → Formspree (configurare ID reale)
+- [x] Cookie banner GDPR
+- [x] Scroll-to-top
+- [x] Animazioni AOS
+- [x] Switch lingua IT/EN (tutte le pagine)
+- [x] Filtri nelle pagine categoria
 - [ ] Aggiungere immagini reali delle proprietà
-- [ ] Collegare il form contatti a un backend o servizio email (es. Formspree)
-- [ ] Implementare pagine dettaglio dinamiche per ogni annuncio
-- [ ] Aggiungere Google Maps nella sezione contatti
+- [ ] Configurare Formspree con ID account reale
 - [ ] SEO: meta description, Open Graph, sitemap.xml
+- [ ] Deploy (hosting + dominio)

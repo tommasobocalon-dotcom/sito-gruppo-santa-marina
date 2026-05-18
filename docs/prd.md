@@ -102,26 +102,45 @@ Il design di riferimento è su Figma:
 
 ---
 
-## 7. Fuori scope (v1.0)
+## 7. Fuori scope (v1.0) — aggiornato v1.1
 
+~~- Ricerca e filtri per gli immobili~~ → **Implementata in v1.1**  
+~~- Multilinguismo (IT/EN)~~ → **Implementata in v1.1**  
+
+Ancora fuori scope:
 - CMS o backend per la gestione degli annunci
 - Area riservata agenti
-- Ricerca e filtri per gli immobili
-- Multilinguismo (IT/EN)
 - Chat live o chatbot
 - Integrazione MLS / portali immobiliari (Idealista, Immobiliare.it)
 
 ---
 
-## 8. Roadmap
+## 8. Requisiti aggiuntivi v1.1
+
+| ID | Requisito | Priorità | Stato |
+|---|---|---|---|
+| RF-10 | Cookie banner GDPR conforme | Alta | ✅ |
+| RF-11 | Form contatti collegato a Formspree | Alta | ✅ (ID placeholder) |
+| RF-12 | Google Maps embed sezione contatti | Media | ✅ |
+| RF-13 | Switch lingua IT/EN con persistenza | Alta | ✅ (tutte le 26 pagine dettaglio tradotte) |
+| RF-14 | Filtri per tipo, zona, prezzo nelle pagine categoria | Media | ✅ |
+| RF-15 | Scroll-to-top button | Bassa | ✅ |
+| RF-16 | Animazioni AOS allo scroll | Bassa | ✅ |
+
+---
+
+## 9. Roadmap
 
 | Fase | Attività | Stato |
 |---|---|---|
 | Fase 1 | Struttura HTML e CSS base da Figma | ✅ Completata |
 | Fase 1b | Responsive design (6 breakpoint: 390px → 1440px+) | ✅ Completata |
 | Fase 2 | Contenuti reali (testi, foto proprietà) | 🔄 In corso |
-| Fase 3 | Form contatti → backend / Formspree | ⏳ Da fare |
-| Fase 4 | Mappa Google Maps | ⏳ Da fare |
+| Fase 3 | Form contatti → Formspree | ✅ Completata (ID da configurare) |
+| Fase 4 | Mappa Google Maps | ✅ Completata |
+| Fase 4b | Cookie banner GDPR | ✅ Completata |
+| Fase 4c | Switch lingua IT/EN | ✅ Completata |
+| Fase 4d | Filtri listing pages | ✅ Completata |
 | Fase 5 | SEO on-page (meta tag, sitemap) | ⏳ Da fare |
 | Fase 6 | Test cross-browser e mobile | ⏳ Da fare |
 | Fase 7 | Deploy (hosting + dominio) | ⏳ Da fare |

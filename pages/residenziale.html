@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Residenziale — Gruppo Santa Marina Immobiliare</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body>
 
@@ -18,53 +19,107 @@
       <span></span><span></span><span></span>
     </button>
     <nav class="navbar__links" id="nav-links">
-      <a href="#">IMMOBILI</a>
-      <a href="#">SERVIZI</a>
-      <a href="../index.html#chi-siamo">CHI SIAMO</a>
-      <a href="../index.html#contatti">CONTATTI</a>
+      <a href="#"><span class="t-it">IMMOBILI</span><span class="t-en">PROPERTIES</span></a>
+      <a href="#"><span class="t-it">SERVIZI</span><span class="t-en">SERVICES</span></a>
+      <a href="../index.html#chi-siamo"><span class="t-it">CHI SIAMO</span><span class="t-en">ABOUT US</span></a>
+      <a href="../index.html#contatti"><span class="t-it">CONTATTI</span><span class="t-en">CONTACT</span></a>
     </nav>
   </nav>
 
   <!-- Category Header -->
   <header class="cat-header">
-    <p class="cat-header__breadcrumb"><a href="../index.html">Home</a> / Residenziale</p>
+    <p class="cat-header__breadcrumb">
+      <a href="../index.html">Home</a> /
+      <span class="t-it">Residenziale</span><span class="t-en">Residential</span>
+    </p>
     <div class="cat-header__divider"></div>
-    <h1 class="cat-header__title">Residenziale</h1>
-    <p class="cat-header__sub">Palazzi storici, appartamenti d'epoca e residenze esclusive in laguna</p>
+    <h1 class="cat-header__title">
+      <span class="t-it">Residenziale</span><span class="t-en">Residential</span>
+    </h1>
+    <p class="cat-header__sub">
+      <span class="t-it">Palazzi storici, appartamenti d'epoca e residenze esclusive in laguna</span>
+      <span class="t-en">Historic palaces, period apartments and exclusive residences in the lagoon</span>
+    </p>
   </header>
+
+  <!-- Filter Bar -->
+  <div class="filters" id="filter-bar">
+    <label class="filters__label" for="filter-tipo">
+      <span class="t-it">Tipo</span><span class="t-en">Type</span>
+    </label>
+    <select class="filters__select" id="filter-tipo">
+      <option value=""><span class="t-it">Tutti</span><span class="t-en">All</span></option>
+      <option value="residenza">Residenza</option>
+      <option value="palazzo">Palazzo</option>
+      <option value="villa">Villa</option>
+      <option value="appartamento">Appartamento</option>
+      <option value="isola-privata"><span class="t-it">Isola Privata</span><span class="t-en">Private Island</span></option>
+    </select>
+
+    <label class="filters__label" for="filter-zona">
+      <span class="t-it">Zona</span><span class="t-en">Area</span>
+    </label>
+    <select class="filters__select" id="filter-zona">
+      <option value=""><span class="t-it">Tutte</span><span class="t-en">All</span></option>
+      <option value="san-polo">San Polo</option>
+      <option value="laguna-veneta">Laguna Veneta</option>
+      <option value="cannaregio">Cannaregio</option>
+      <option value="colli-euganei">Colli Euganei</option>
+      <option value="san-marco">San Marco</option>
+      <option value="cortina">Cortina d'Ampezzo</option>
+    </select>
+
+    <label class="filters__label" for="filter-prezzo">
+      <span class="t-it">Prezzo max</span><span class="t-en">Max price</span>
+    </label>
+    <select class="filters__select" id="filter-prezzo">
+      <option value="0"><span class="t-it">Tutti</span><span class="t-en">All</span></option>
+      <option value="1700000">≤ € 1.700.000</option>
+      <option value="2000000">≤ € 2.000.000</option>
+      <option value="2500000">≤ € 2.500.000</option>
+      <option value="3000000">≤ € 3.000.000</option>
+    </select>
+
+    <button class="filters__reset" id="filter-reset">
+      <span class="t-it">Azzera</span><span class="t-en">Reset</span>
+    </button>
+  </div>
 
   <!-- Listings -->
   <section class="listings">
     <div class="listings__row">
-      <a href="residenziale/residenza-san-polo.html" class="prop-card">
+      <a href="residenziale/residenza-san-polo.html" class="prop-card"
+         data-tipo="residenza" data-zona="san-polo" data-prezzo-min="3000000">
         <div class="prop-card__image" style="background-image: url('../assets/img/residenziale/sanpolo1.jpeg'); background-size: cover; background-position: center;">
-          <span class="prop-card__badge"><span>RESIDENZA</span></span>
+          <span class="prop-card__badge"><span class="t-it">RESIDENZA</span><span class="t-en">RESIDENCE</span></span>
           <p class="prop-card__price">€ 3.000.000</p>
         </div>
         <div class="prop-card__body">
           <p class="prop-card__district">SAN POLO</p>
           <h3 class="prop-card__title">Residenza San Polo</h3>
           <div class="prop-card__divider"></div>
-          <p class="prop-card__meta">240 m² — Giardino 500 m²</p>
-          <p class="prop-card__cta">SCOPRI →</p>
+          <p class="prop-card__meta">240 m² — <span class="t-it">Giardino</span><span class="t-en">Garden</span> 500 m²</p>
+          <p class="prop-card__cta"><span class="t-it">SCOPRI →</span><span class="t-en">DISCOVER →</span></p>
         </div>
       </a>
-      <a href="residenziale/isola-di-crevan.html" class="prop-card">
+      <a href="residenziale/isola-di-crevan.html" class="prop-card"
+         data-tipo="isola-privata" data-zona="laguna-veneta" data-prezzo-min="0">
         <div class="prop-card__image" style="background-image: url('../assets/img/residenziale/isola1.jpeg'); background-size: cover; background-position: center;">
-          <span class="prop-card__badge"><span>ISOLA PRIVATA</span></span>
-          <p class="prop-card__price">Su Richiesta</p>
+          <span class="prop-card__badge"><span class="t-it">ISOLA PRIVATA</span><span class="t-en">PRIVATE ISLAND</span></span>
+          <p class="prop-card__price"><span class="t-it">Su Richiesta</span><span class="t-en">On Request</span></p>
         </div>
         <div class="prop-card__body">
           <p class="prop-card__district">LAGUNA VENETA</p>
           <h3 class="prop-card__title">Isola di Crevan</h3>
           <div class="prop-card__divider"></div>
-          <p class="prop-card__meta">Parco 5.500 m² — Dal 1806</p>
-          <p class="prop-card__cta">SCOPRI →</p>
+          <p class="prop-card__meta"><span class="t-it">Parco</span><span class="t-en">Park</span> 5.500 m² — Dal 1806</p>
+          <p class="prop-card__cta"><span class="t-it">SCOPRI →</span><span class="t-en">DISCOVER →</span></p>
         </div>
       </a>
-      <a href="residenziale/residenza-san-leonardo.html" class="prop-card">
+      <a href="residenziale/residenza-san-leonardo.html" class="prop-card"
+         data-tipo="palazzo" data-zona="cannaregio" data-prezzo-min="2000000">
         <div class="prop-card__image" style="background-image: url('../assets/img/residenziale/cannaregio2.jpeg'); background-size: cover; background-position: center;">
-          <span class="prop-card__badge"><span>PALAZZO GOTICO</span></span>
+          <span class="prop-card__badge"><span class="t-it">PALAZZO GOTICO</span><span class="t-en">GOTHIC PALACE</span></span>
           <p class="prop-card__price">€ 2.000.000</p>
         </div>
         <div class="prop-card__body">
@@ -72,48 +127,51 @@
           <h3 class="prop-card__title">Residenza San Leonardo</h3>
           <div class="prop-card__divider"></div>
           <p class="prop-card__meta">291 m² — 2° / 3° Piano</p>
-          <p class="prop-card__cta">SCOPRI →</p>
+          <p class="prop-card__cta"><span class="t-it">SCOPRI →</span><span class="t-en">DISCOVER →</span></p>
         </div>
       </a>
     </div>
     <div class="listings__row">
-      <a href="residenziale/villa-ca-barbero.html" class="prop-card">
+      <a href="residenziale/villa-ca-barbero.html" class="prop-card"
+         data-tipo="villa" data-zona="colli-euganei" data-prezzo-min="1700000">
         <div class="prop-card__image" style="background-image: url('../assets/img/residenziale/cabarbaro1.jpeg'); background-size: cover; background-position: center;">
-          <span class="prop-card__badge"><span>VILLA STORICA</span></span>
+          <span class="prop-card__badge"><span class="t-it">VILLA STORICA</span><span class="t-en">HISTORIC VILLA</span></span>
           <p class="prop-card__price">€ 1.700.000</p>
         </div>
         <div class="prop-card__body">
           <p class="prop-card__district">COLLI EUGANEI</p>
           <h3 class="prop-card__title">Villa Cà Barbero</h3>
           <div class="prop-card__divider"></div>
-          <p class="prop-card__meta">~1.490 m² — Tenuta 10 ha</p>
-          <p class="prop-card__cta">SCOPRI →</p>
+          <p class="prop-card__meta">~1.490 m² — <span class="t-it">Tenuta</span><span class="t-en">Estate</span> 10 ha</p>
+          <p class="prop-card__cta"><span class="t-it">SCOPRI →</span><span class="t-en">DISCOVER →</span></p>
         </div>
       </a>
-      <a href="residenziale/residenza-santanzolo.html" class="prop-card">
+      <a href="residenziale/residenza-santanzolo.html" class="prop-card"
+         data-tipo="residenza" data-zona="san-marco" data-prezzo-min="1700000">
         <div class="prop-card__image" style="background-image: url('../assets/img/residenziale/angelo1.jpeg'); background-size: cover; background-position: center;">
-          <span class="prop-card__badge"><span>RESIDENZA</span></span>
+          <span class="prop-card__badge"><span class="t-it">RESIDENZA</span><span class="t-en">RESIDENCE</span></span>
           <p class="prop-card__price">€ 1.700.000</p>
         </div>
         <div class="prop-card__body">
           <p class="prop-card__district">SAN MARCO</p>
           <h3 class="prop-card__title">Residenza Sant'Anzolo</h3>
           <div class="prop-card__divider"></div>
-          <p class="prop-card__meta">212 m² — Riva Privata</p>
-          <p class="prop-card__cta">SCOPRI →</p>
+          <p class="prop-card__meta">212 m² — <span class="t-it">Riva Privata</span><span class="t-en">Private Waterfront</span></p>
+          <p class="prop-card__cta"><span class="t-it">SCOPRI →</span><span class="t-en">DISCOVER →</span></p>
         </div>
       </a>
-      <a href="residenziale/residenza-cortina.html" class="prop-card">
+      <a href="residenziale/residenza-cortina.html" class="prop-card"
+         data-tipo="appartamento" data-zona="cortina" data-prezzo-min="2500000">
         <div class="prop-card__image" style="background-image: url('../assets/img/residenziale/cort1.jpeg'); background-size: cover; background-position: center;">
-          <span class="prop-card__badge"><span>APPARTAMENTO</span></span>
+          <span class="prop-card__badge"><span class="t-it">APPARTAMENTO</span><span class="t-en">APARTMENT</span></span>
           <p class="prop-card__price">€ 2.500.000</p>
         </div>
         <div class="prop-card__body">
           <p class="prop-card__district">CORTINA D'AMPEZZO</p>
           <h3 class="prop-card__title">Residenza Cortina</h3>
           <div class="prop-card__divider"></div>
-          <p class="prop-card__meta">178 m² — Vista Dolomiti</p>
-          <p class="prop-card__cta">SCOPRI →</p>
+          <p class="prop-card__meta">178 m² — <span class="t-it">Vista Dolomiti</span><span class="t-en">Dolomites View</span></p>
+          <p class="prop-card__cta"><span class="t-it">SCOPRI →</span><span class="t-en">DISCOVER →</span></p>
         </div>
       </a>
     </div>
@@ -126,31 +184,34 @@
         <p class="footer__brand-name">GRUPPO SANTA MARINA</p>
         <p class="footer__brand-sub">Immobiliare</p>
         <div class="footer__brand-divider"></div>
-        <p class="footer__brand-desc">Il punto di riferimento<br>per l'immobiliare d'eccellenza<br>nel cuore della Serenissima.</p>
+        <p class="footer__brand-desc">
+          <span class="t-it">Il punto di riferimento<br>per l'immobiliare d'eccellenza<br>nel cuore della Serenissima.</span>
+          <span class="t-en">The reference point<br>for excellent real estate<br>in the heart of Venice.</span>
+        </p>
       </div>
       <div class="footer__col">
-        <p class="footer__col-title">IMMOBILI</p>
+        <p class="footer__col-title"><span class="t-it">IMMOBILI</span><span class="t-en">PROPERTIES</span></p>
         <div class="footer__col-divider"></div>
-        <a href="residenziale.html" class="footer__col-link">Palazzi Storici</a>
-        <a href="residenziale.html" class="footer__col-link">Ville &amp; Residenze</a>
-        <a href="residenziale.html" class="footer__col-link">Appartamenti</a>
-        <a href="retail.html" class="footer__col-link">Attività Commerciali</a>
-        <a href="#" class="footer__col-link">Investimenti</a>
+        <a href="residenziale.html" class="footer__col-link"><span class="t-it">Palazzi Storici</span><span class="t-en">Historic Palaces</span></a>
+        <a href="residenziale.html" class="footer__col-link"><span class="t-it">Ville &amp; Residenze</span><span class="t-en">Villas &amp; Residences</span></a>
+        <a href="residenziale.html" class="footer__col-link"><span class="t-it">Appartamenti</span><span class="t-en">Apartments</span></a>
+        <a href="retail.html" class="footer__col-link"><span class="t-it">Attività Commerciali</span><span class="t-en">Commercial Properties</span></a>
+        <a href="#" class="footer__col-link"><span class="t-it">Investimenti</span><span class="t-en">Investments</span></a>
         <a href="hospitality.html" class="footer__col-link">Retail Hospitality</a>
       </div>
       <div class="footer__col">
-        <p class="footer__col-title">SERVIZI</p>
+        <p class="footer__col-title"><span class="t-it">SERVIZI</span><span class="t-en">SERVICES</span></p>
         <div class="footer__col-divider"></div>
-        <a href="#" class="footer__col-link">Consulenza immobiliare</a>
-        <a href="#" class="footer__col-link">Compravendita</a>
-        <a href="#" class="footer__col-link">Locazioni</a>
-        <a href="#" class="footer__col-link">Gestione Patrimonio</a>
-        <a href="#" class="footer__col-link">Proprietà esclusive</a>
+        <a href="#" class="footer__col-link"><span class="t-it">Consulenza immobiliare</span><span class="t-en">Real Estate Advisory</span></a>
+        <a href="#" class="footer__col-link"><span class="t-it">Compravendita</span><span class="t-en">Sales</span></a>
+        <a href="#" class="footer__col-link"><span class="t-it">Locazioni</span><span class="t-en">Rentals</span></a>
+        <a href="#" class="footer__col-link"><span class="t-it">Gestione Patrimonio</span><span class="t-en">Asset Management</span></a>
+        <a href="#" class="footer__col-link"><span class="t-it">Proprietà esclusive</span><span class="t-en">Exclusive Properties</span></a>
         <a href="#" class="footer__col-link">Virtual Tour</a>
-        <a href="#" class="footer__col-link">Aste Immobiliari</a>
+        <a href="#" class="footer__col-link"><span class="t-it">Aste Immobiliari</span><span class="t-en">Real Estate Auctions</span></a>
       </div>
       <div class="footer__col">
-        <p class="footer__col-title">SEDE OPERATIVA</p>
+        <p class="footer__col-title"><span class="t-it">SEDE OPERATIVA</span><span class="t-en">OFFICE</span></p>
         <div class="footer__col-divider"></div>
         <p class="footer__col-address">Venezia - Castello 5893<br>Campo Santa Marina<br>Cap 30122</p>
       </div>
@@ -160,12 +221,13 @@
       <div class="footer__legal-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Cookie Policy</a>
-        <a href="#">Note Legali</a>
+        <a href="#"><span class="t-it">Note Legali</span><span class="t-en">Legal Notes</span></a>
         <a href="#">GDPR</a>
       </div>
     </div>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="../assets/js/main.js"></script>
 </body>
 </html>

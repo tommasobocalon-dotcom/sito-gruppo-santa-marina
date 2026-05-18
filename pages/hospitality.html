@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Retail Hospitality — Gruppo Santa Marina Immobiliare</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body>
 
@@ -18,102 +19,91 @@
       <span></span><span></span><span></span>
     </button>
     <nav class="navbar__links" id="nav-links">
-      <a href="#">IMMOBILI</a>
-      <a href="#">SERVIZI</a>
-      <a href="../index.html#chi-siamo">CHI SIAMO</a>
-      <a href="../index.html#contatti">CONTATTI</a>
+      <a href="#"><span class="t-it">IMMOBILI</span><span class="t-en">PROPERTIES</span></a>
+      <a href="#"><span class="t-it">SERVIZI</span><span class="t-en">SERVICES</span></a>
+      <a href="../index.html#chi-siamo"><span class="t-it">CHI SIAMO</span><span class="t-en">ABOUT US</span></a>
+      <a href="../index.html#contatti"><span class="t-it">CONTATTI</span><span class="t-en">CONTACT</span></a>
     </nav>
   </nav>
 
   <!-- Category Header -->
   <header class="cat-header">
-    <p class="cat-header__breadcrumb"><a href="../index.html">Home</a> / Retail Hospitality</p>
+    <p class="cat-header__breadcrumb">
+      <a href="../index.html">Home</a> / Retail Hospitality
+    </p>
     <div class="cat-header__divider"></div>
     <h1 class="cat-header__title">Retail Hospitality</h1>
-    <p class="cat-header__sub">Hotel boutique, locande di charme e strutture ricettive d'eccellenza</p>
+    <p class="cat-header__sub">
+      <span class="t-it">Hotel boutique, locande di charme e strutture ricettive d'eccellenza</span>
+      <span class="t-en">Boutique hotels, charming inns and excellence hospitality venues</span>
+    </p>
   </header>
+
+  <!-- Filter Bar -->
+  <div class="filters" id="filter-bar">
+    <label class="filters__label" for="filter-tipo">
+      <span class="t-it">Tipo</span><span class="t-en">Type</span>
+    </label>
+    <select class="filters__select" id="filter-tipo">
+      <option value=""><span class="t-it">Tutti</span><span class="t-en">All</span></option>
+      <option value="negozio"><span class="t-it">Negozio</span><span class="t-en">Shop</span></option>
+      <option value="boutique">Boutique</option>
+    </select>
+
+    <label class="filters__label" for="filter-zona">
+      <span class="t-it">Zona</span><span class="t-en">Area</span>
+    </label>
+    <select class="filters__select" id="filter-zona">
+      <option value=""><span class="t-it">Tutte</span><span class="t-en">All</span></option>
+      <option value="san-marco">San Marco</option>
+    </select>
+
+    <label class="filters__label" for="filter-prezzo">
+      <span class="t-it">Prezzo max</span><span class="t-en">Max price</span>
+    </label>
+    <select class="filters__select" id="filter-prezzo">
+      <option value="0"><span class="t-it">Tutti</span><span class="t-en">All</span></option>
+      <option value="5500000">≤ € 5.500.000</option>
+    </select>
+
+    <button class="filters__reset" id="filter-reset">
+      <span class="t-it">Azzera</span><span class="t-en">Reset</span>
+    </button>
+  </div>
 
   <!-- Listings -->
   <section class="listings">
     <div class="listings__row">
-      <a href="hospitality/boutique-hotel-dorsoduro.html" class="prop-card">
+      <!-- Calle XXII Marzo -->
+      <a href="hospitality/calle-xxii-marzo.html" class="prop-card"
+         data-tipo="negozio" data-zona="san-marco" data-prezzo-min="0">
         <div class="prop-card__image">
-          <span class="prop-card__badge"><span>HOTEL</span></span>
-          <p class="prop-card__price">€ 4.800.000</p>
+          <img src="../assets/img/retail/Retail%201/XXII1.jpeg" alt="Calle XXII Marzo">
+          <span class="prop-card__badge"><span class="t-it">NEGOZIO</span><span class="t-en">SHOP</span></span>
+          <p class="prop-card__price"><span class="t-it">Su richiesta</span><span class="t-en">On request</span></p>
         </div>
         <div class="prop-card__body">
-          <p class="prop-card__district">DORSODURO</p>
-          <h3 class="prop-card__title">Boutique Hotel Dorsoduro</h3>
+          <p class="prop-card__district">SAN MARCO</p>
+          <h3 class="prop-card__title">Calle XXII Marzo</h3>
           <div class="prop-card__divider"></div>
-          <p class="prop-card__meta">680 m²</p>
-          <p class="prop-card__cta">SCOPRI →</p>
+          <p class="prop-card__meta">300 m² — 3 <span class="t-it">Livelli</span><span class="t-en">Floors</span> — Off-Market</p>
+          <p class="prop-card__cta"><span class="t-it">SCOPRI →</span><span class="t-en">DISCOVER →</span></p>
         </div>
       </a>
-      <a href="hospitality/locanda-del-doge.html" class="prop-card">
+      <!-- Boutique Via della Moda -->
+      <a href="hospitality/boutique-via-moda.html" class="prop-card"
+         data-tipo="boutique" data-zona="san-marco" data-prezzo-min="5500000">
         <div class="prop-card__image">
-          <span class="prop-card__badge"><span>LOCANDA</span></span>
-          <p class="prop-card__price">€ 2.200.000</p>
+          <img src="../assets/img/retail/Retail%202/Fashion1.jpeg" alt="Boutique Via della Moda">
+          <span class="prop-card__badge"><span>BOUTIQUE</span></span>
+          <p class="prop-card__price">€ 5.500.000</p>
         </div>
         <div class="prop-card__body">
-          <p class="prop-card__district">CANNAREGIO</p>
-          <h3 class="prop-card__title">Locanda del Doge</h3>
+          <p class="prop-card__district">SAN MARCO</p>
+          <h3 class="prop-card__title">Boutique Via della Moda</h3>
           <div class="prop-card__divider"></div>
-          <p class="prop-card__meta">380 m²</p>
-          <p class="prop-card__cta">SCOPRI →</p>
-        </div>
-      </a>
-      <a href="hospitality/bb-palazzo-grimani.html" class="prop-card">
-        <div class="prop-card__image">
-          <span class="prop-card__badge"><span>B&amp;B</span></span>
-          <p class="prop-card__price">€ 1.650.000</p>
-        </div>
-        <div class="prop-card__body">
-          <p class="prop-card__district">CASTELLO</p>
-          <h3 class="prop-card__title">B&amp;B Palazzo Grimani</h3>
-          <div class="prop-card__divider"></div>
-          <p class="prop-card__meta">290 m²</p>
-          <p class="prop-card__cta">SCOPRI →</p>
-        </div>
-      </a>
-    </div>
-    <div class="listings__row">
-      <a href="hospitality/residenza-epoca-accademia.html" class="prop-card">
-        <div class="prop-card__image">
-          <span class="prop-card__badge"><span>RESIDENZA</span></span>
-          <p class="prop-card__price">€ 3.100.000</p>
-        </div>
-        <div class="prop-card__body">
-          <p class="prop-card__district">DORSODURO</p>
-          <h3 class="prop-card__title">Residenza d'Epoca Accademia</h3>
-          <div class="prop-card__divider"></div>
-          <p class="prop-card__meta">520 m²</p>
-          <p class="prop-card__cta">SCOPRI →</p>
-        </div>
-      </a>
-      <a href="hospitality/hotel-laguna-torcello.html" class="prop-card">
-        <div class="prop-card__image">
-          <span class="prop-card__badge"><span>HOTEL</span></span>
-          <p class="prop-card__price">€ 1.900.000</p>
-        </div>
-        <div class="prop-card__body">
-          <p class="prop-card__district">TORCELLO</p>
-          <h3 class="prop-card__title">Hotel Laguna Torcello</h3>
-          <div class="prop-card__divider"></div>
-          <p class="prop-card__meta">440 m²</p>
-          <p class="prop-card__cta">SCOPRI →</p>
-        </div>
-      </a>
-      <a href="hospitality/pensione-veneziana.html" class="prop-card">
-        <div class="prop-card__image">
-          <span class="prop-card__badge"><span>PENSIONE</span></span>
-          <p class="prop-card__price">€ 980.000</p>
-        </div>
-        <div class="prop-card__body">
-          <p class="prop-card__district">SAN POLO</p>
-          <h3 class="prop-card__title">Pensione Veneziana</h3>
-          <div class="prop-card__divider"></div>
-          <p class="prop-card__meta">180 m²</p>
-          <p class="prop-card__cta">SCOPRI →</p>
+          <p class="prop-card__meta">87 m² — <span class="t-it">Rendita</span><span class="t-en">Yield</span> 240k €/<span class="t-it">anno</span><span class="t-en">yr</span></p>
+          <p class="prop-card__cta"><span class="t-it">SCOPRI →</span><span class="t-en">DISCOVER →</span></p>
         </div>
       </a>
     </div>
@@ -126,31 +116,34 @@
         <p class="footer__brand-name">GRUPPO SANTA MARINA</p>
         <p class="footer__brand-sub">Immobiliare</p>
         <div class="footer__brand-divider"></div>
-        <p class="footer__brand-desc">Il punto di riferimento<br>per l'immobiliare d'eccellenza<br>nel cuore della Serenissima.</p>
+        <p class="footer__brand-desc">
+          <span class="t-it">Il punto di riferimento<br>per l'immobiliare d'eccellenza<br>nel cuore della Serenissima.</span>
+          <span class="t-en">The reference point<br>for excellent real estate<br>in the heart of Venice.</span>
+        </p>
       </div>
       <div class="footer__col">
-        <p class="footer__col-title">IMMOBILI</p>
+        <p class="footer__col-title"><span class="t-it">IMMOBILI</span><span class="t-en">PROPERTIES</span></p>
         <div class="footer__col-divider"></div>
-        <a href="residenziale.html" class="footer__col-link">Palazzi Storici</a>
-        <a href="residenziale.html" class="footer__col-link">Ville &amp; Residenze</a>
-        <a href="residenziale.html" class="footer__col-link">Appartamenti</a>
-        <a href="retail.html" class="footer__col-link">Attività Commerciali</a>
-        <a href="#" class="footer__col-link">Investimenti</a>
+        <a href="residenziale.html" class="footer__col-link"><span class="t-it">Palazzi Storici</span><span class="t-en">Historic Palaces</span></a>
+        <a href="residenziale.html" class="footer__col-link"><span class="t-it">Ville &amp; Residenze</span><span class="t-en">Villas &amp; Residences</span></a>
+        <a href="residenziale.html" class="footer__col-link"><span class="t-it">Appartamenti</span><span class="t-en">Apartments</span></a>
+        <a href="retail.html" class="footer__col-link"><span class="t-it">Attività Commerciali</span><span class="t-en">Commercial Properties</span></a>
+        <a href="#" class="footer__col-link"><span class="t-it">Investimenti</span><span class="t-en">Investments</span></a>
         <a href="hospitality.html" class="footer__col-link">Retail Hospitality</a>
       </div>
       <div class="footer__col">
-        <p class="footer__col-title">SERVIZI</p>
+        <p class="footer__col-title"><span class="t-it">SERVIZI</span><span class="t-en">SERVICES</span></p>
         <div class="footer__col-divider"></div>
-        <a href="#" class="footer__col-link">Consulenza immobiliare</a>
-        <a href="#" class="footer__col-link">Compravendita</a>
-        <a href="#" class="footer__col-link">Locazioni</a>
-        <a href="#" class="footer__col-link">Gestione Patrimonio</a>
-        <a href="#" class="footer__col-link">Proprietà esclusive</a>
+        <a href="#" class="footer__col-link"><span class="t-it">Consulenza immobiliare</span><span class="t-en">Real Estate Advisory</span></a>
+        <a href="#" class="footer__col-link"><span class="t-it">Compravendita</span><span class="t-en">Sales</span></a>
+        <a href="#" class="footer__col-link"><span class="t-it">Locazioni</span><span class="t-en">Rentals</span></a>
+        <a href="#" class="footer__col-link"><span class="t-it">Gestione Patrimonio</span><span class="t-en">Asset Management</span></a>
+        <a href="#" class="footer__col-link"><span class="t-it">Proprietà esclusive</span><span class="t-en">Exclusive Properties</span></a>
         <a href="#" class="footer__col-link">Virtual Tour</a>
-        <a href="#" class="footer__col-link">Aste Immobiliari</a>
+        <a href="#" class="footer__col-link"><span class="t-it">Aste Immobiliari</span><span class="t-en">Real Estate Auctions</span></a>
       </div>
       <div class="footer__col">
-        <p class="footer__col-title">SEDE OPERATIVA</p>
+        <p class="footer__col-title"><span class="t-it">SEDE OPERATIVA</span><span class="t-en">OFFICE</span></p>
         <div class="footer__col-divider"></div>
         <p class="footer__col-address">Venezia - Castello 5893<br>Campo Santa Marina<br>Cap 30122</p>
       </div>
@@ -160,12 +153,13 @@
       <div class="footer__legal-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Cookie Policy</a>
-        <a href="#">Note Legali</a>
+        <a href="#"><span class="t-it">Note Legali</span><span class="t-en">Legal Notes</span></a>
         <a href="#">GDPR</a>
       </div>
     </div>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="../assets/js/main.js"></script>
 </body>
 </html>

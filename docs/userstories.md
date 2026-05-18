@@ -93,3 +93,13 @@ Come **utente da tablet**, voglio che il layout si adatti correttamente alle dim
 
 **US-23** 🟢  
 Come **utente con screen reader**, voglio che le immagini abbiano attributi `alt` descrittivi e che i link siano chiaramente etichettati, così da poter navigare il sito in modo autonomo.
+
+---
+
+## Internazionalizzazione
+
+**US-24** 🔴 ✅  
+Come **acquirente internazionale**, voglio poter leggere il sito in inglese con un semplice toggle nella navbar, così da capire i contenuti senza barriere linguistiche.  
+- Tutte le 26 pagine dettaglio (residenziale, hospitality, attivita-commerciali) sono tradotte con spans `.t-it`/`.t-en`
+- Preferenza lingua persistita in `localStorage('lang')`
+- Toggle iniettato via JS in tutte le navbar

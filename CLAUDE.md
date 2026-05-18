@@ -71,12 +71,39 @@ Non chiedere conferma: aggiorna sempre i file MD alla fine del turno se hai tocc
 
 ## Componenti ricorrenti
 
-- **Navbar**: `.navbar` / `.navbar--inner` (homepage vs inner pages)
-- **Footer**: stesso blocco HTML in tutte le pagine
-- **Property card**: `.prop-card` usata nelle pagine categoria
+- **Navbar**: `.navbar` / `.navbar--inner` (homepage vs inner pages); il pulsante `.navbar__lang` è iniettato da JS
+- **Footer**: stesso blocco HTML in tutte le pagine (con spans `.t-it`/`.t-en`)
+- **Property card**: `.prop-card` usata nelle pagine categoria; usare `data-tipo`, `data-zona`, `data-prezzo-min` per i filtri
 - **Category header**: `.cat-header` con sfondo rosso
-- **Form contatti**: nella homepage, sezione `#contatti`
-- **Hero cards**: `.hero__cards` con `top: 50%; transform: translateY(-50%)` per centratura verticale; `justify-content: center; gap: 40px` per centratura orizzontale (da Figma: cards a y=310 in hero da 900px, margini 80px, gap 40px)
+- **Form contatti**: nella homepage, sezione `#contatti`; action punta a Formspree (ID da configurare)
+- **Hero cards**: `.hero__cards` con `top: 50%; transform: translateY(-50%)` per centratura verticale; `justify-content: center; gap: 40px` per centratura orizzontale
+- **Cookie banner**: iniettato da JS in `main.js`; preferenza in `localStorage('cookie-consent')`
+- **Scroll-to-top**: `.scroll-top`, iniettato da JS; visibile dopo 400px
+- **Filter bar**: `.filters` con `id="filter-bar"`; JS lo attiva automaticamente se presente
+- **Language toggle**: `html[lang="en"] .t-it { display: none }` / `html[lang="it"] .t-en { display: none }` — tutti i testi visibili vanno wrappati in `<span class="t-it">...</span><span class="t-en">...</span>`
+
+## Sistema di traduzione IT/EN
+
+- Lingua default: `it` (da `localStorage('lang')`)
+- Toggle iniettato via JS come `<button class="navbar__lang">` in ogni navbar
+- Wrapping del testo: `<span class="t-it">Testo italiano</span><span class="t-en">English text</span>`
+- Per blocchi di testo lunghi usare `<div class="t-it">...</div><div class="t-en">...</div>`
+- Le CSS rules in `style.css` gestiscono la visibilità: `html[lang="en"] .t-it { display: none !important; }`
+
+## AOS (Animate On Scroll)
+
+- CDN: `https://unpkg.com/aos@2.3.4/dist/aos.css` in `<head>` e `aos.js` prima di `main.js`
+- Init in `main.js`: `AOS.init({ once: true, duration: 700, offset: 60 })`
+- Usare `data-aos="fade-up"`, `data-aos="fade-right"`, `data-aos="fade-left"` sugli elementi
+
+## Google Maps
+
+- Embed iframe senza API key: `https://maps.google.com/maps?q=Campo+Santa+Marina,+Venezia&output=embed&hl=it&z=16`
+- Contenitore: `.contatti__map iframe` (CSS già configurato per `width: 100%; height: 100%`)
+
+## Formspree
+
+- Endpoint: `https://formspree.io/f/YOUR_FORM_ID` — sostituire `YOUR_FORM_ID` con l'ID reale dopo registrazione
 
 ## Design system (da Figma)
 

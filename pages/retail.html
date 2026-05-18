@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Attività Commerciali — Gruppo Santa Marina Immobiliare</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body>
 
@@ -18,108 +19,103 @@
       <span></span><span></span><span></span>
     </button>
     <nav class="navbar__links" id="nav-links">
-      <a href="#">IMMOBILI</a>
-      <a href="#">SERVIZI</a>
-      <a href="../index.html#chi-siamo">CHI SIAMO</a>
-      <a href="../index.html#contatti">CONTATTI</a>
+      <a href="#"><span class="t-it">IMMOBILI</span><span class="t-en">PROPERTIES</span></a>
+      <a href="#"><span class="t-it">SERVIZI</span><span class="t-en">SERVICES</span></a>
+      <a href="../index.html#chi-siamo"><span class="t-it">CHI SIAMO</span><span class="t-en">ABOUT US</span></a>
+      <a href="../index.html#contatti"><span class="t-it">CONTATTI</span><span class="t-en">CONTACT</span></a>
     </nav>
   </nav>
 
   <!-- Category Header -->
   <header class="cat-header">
-    <p class="cat-header__breadcrumb"><a href="../index.html">Home</a> / Attività Commerciali</p>
+    <p class="cat-header__breadcrumb">
+      <a href="../index.html">Home</a> /
+      <span class="t-it">Attività Commerciali</span><span class="t-en">Commercial Properties</span>
+    </p>
     <div class="cat-header__divider"></div>
-    <h1 class="cat-header__title">Attività Commerciali</h1>
-    <p class="cat-header__sub">Spazi commerciali, negozi e showroom nei sestieri storici di Venezia</p>
+    <h1 class="cat-header__title">
+      <span class="t-it">Attività Commerciali</span><span class="t-en">Commercial Properties</span>
+    </h1>
+    <p class="cat-header__sub">
+      <span class="t-it">Spazi commerciali, negozi e showroom nei sestieri storici di Venezia</span>
+      <span class="t-en">Commercial spaces, shops and showrooms in Venice's historic districts</span>
+    </p>
   </header>
+
+  <!-- Filter Bar -->
+  <div class="filters" id="filter-bar">
+    <label class="filters__label" for="filter-zona">
+      <span class="t-it">Zona</span><span class="t-en">Area</span>
+    </label>
+    <select class="filters__select" id="filter-zona">
+      <option value=""><span class="t-it">Tutte</span><span class="t-en">All</span></option>
+      <option value="san-marco">San Marco</option>
+    </select>
+
+    <label class="filters__label" for="filter-prezzo">
+      <span class="t-it">Key money max</span><span class="t-en">Max key money</span>
+    </label>
+    <select class="filters__select" id="filter-prezzo">
+      <option value="0"><span class="t-it">Tutti</span><span class="t-en">All</span></option>
+      <option value="200000">≤ € 200.000</option>
+      <option value="400000">≤ € 400.000</option>
+      <option value="500000">≤ € 500.000</option>
+    </select>
+
+    <button class="filters__reset" id="filter-reset">
+      <span class="t-it">Azzera</span><span class="t-en">Reset</span>
+    </button>
+  </div>
 
   <!-- Listings -->
   <section class="listings">
     <div class="listings__row">
-      <!-- Card 1 -->
-      <a href="attivita-commerciali/negozio-canal-grande.html" class="prop-card">
+      <!-- Merceria dell'Orologio -->
+      <a href="attivita-commerciali/merceria-orologio.html" class="prop-card"
+         data-tipo="retail" data-zona="san-marco" data-prezzo-min="400000">
         <div class="prop-card__image">
-          <span class="prop-card__badge"><span>NEGOZIO</span></span>
-          <p class="prop-card__price">€ 980.000</p>
+          <img src="../assets/img/immobili-commerciali/Prima%20attivit%C3%A0%20commerciale/Primaattivit%C3%A0.JPG" alt="Merceria dell'Orologio">
+          <span class="prop-card__badge"><span>RETAIL</span></span>
+          <p class="prop-card__price">Key money €400.000</p>
         </div>
         <div class="prop-card__body">
-          <p class="prop-card__district">SAN MARCO</p>
-          <h3 class="prop-card__title">Negozio Canal Grande</h3>
+          <p class="prop-card__district">SAN MARCO — MERCERIE</p>
+          <h3 class="prop-card__title">Merceria dell'Orologio</h3>
           <div class="prop-card__divider"></div>
-          <p class="prop-card__meta">120 m²</p>
-          <p class="prop-card__cta">SCOPRI →</p>
+          <p class="prop-card__meta">20 m² — <span class="t-it">Canone</span><span class="t-en">Rent</span> 144k €/<span class="t-it">anno</span><span class="t-en">yr</span></p>
+          <p class="prop-card__cta"><span class="t-it">SCOPRI →</span><span class="t-en">DISCOVER →</span></p>
         </div>
       </a>
-      <!-- Card 2 -->
-      <a href="attivita-commerciali/showroom-rialto.html" class="prop-card">
+      <!-- Marzaria San Salvador -->
+      <a href="attivita-commerciali/marzaria-san-salvador.html" class="prop-card"
+         data-tipo="retail" data-zona="san-marco" data-prezzo-min="180000">
         <div class="prop-card__image">
-          <span class="prop-card__badge"><span>SHOWROOM</span></span>
-          <p class="prop-card__price">€ 1.250.000</p>
+          <img src="../assets/img/immobili-commerciali/Seconda%20attivit%C3%A0%20commerciale/Secondaattivit%C3%A0.JPG" alt="Marzaria San Salvador">
+          <span class="prop-card__badge"><span>RETAIL</span></span>
+          <p class="prop-card__price">Key money €180.000</p>
         </div>
         <div class="prop-card__body">
-          <p class="prop-card__district">SAN POLO</p>
-          <h3 class="prop-card__title">Showroom Rialto</h3>
+          <p class="prop-card__district">SAN MARCO — MERCERIE</p>
+          <h3 class="prop-card__title">Marzaria San Salvador</h3>
           <div class="prop-card__divider"></div>
-          <p class="prop-card__meta">210 m²</p>
-          <p class="prop-card__cta">SCOPRI →</p>
+          <p class="prop-card__meta">52 m² — <span class="t-it">Canone</span><span class="t-en">Rent</span> 54k €/<span class="t-it">anno</span><span class="t-en">yr</span></p>
+          <p class="prop-card__cta"><span class="t-it">SCOPRI →</span><span class="t-en">DISCOVER →</span></p>
         </div>
       </a>
-      <!-- Card 3 -->
-      <a href="attivita-commerciali/bottega-arte.html" class="prop-card">
+      <!-- Campo San Bartolomeo -->
+      <a href="attivita-commerciali/campo-san-bartolomeo.html" class="prop-card"
+         data-tipo="retail" data-zona="san-marco" data-prezzo-min="500000">
         <div class="prop-card__image">
-          <span class="prop-card__badge"><span>BOTTEGA</span></span>
-          <p class="prop-card__price">€ 640.000</p>
+          <img src="../assets/img/immobili-commerciali/Terza%20attivit%C3%A0%20commerciale/RIALTO1.jpeg" alt="Campo San Bartolomeo">
+          <span class="prop-card__badge"><span>RETAIL</span></span>
+          <p class="prop-card__price">Key money €500.000</p>
         </div>
         <div class="prop-card__body">
-          <p class="prop-card__district">DORSODURO</p>
-          <h3 class="prop-card__title">Bottega d'Arte</h3>
+          <p class="prop-card__district">SAN MARCO — RIALTO</p>
+          <h3 class="prop-card__title">Campo San Bartolomeo</h3>
           <div class="prop-card__divider"></div>
-          <p class="prop-card__meta">85 m²</p>
-          <p class="prop-card__cta">SCOPRI →</p>
-        </div>
-      </a>
-    </div>
-    <div class="listings__row">
-      <!-- Card 4 -->
-      <a href="attivita-commerciali/flagship-store-frezzeria.html" class="prop-card">
-        <div class="prop-card__image">
-          <span class="prop-card__badge"><span>NEGOZIO</span></span>
-          <p class="prop-card__price">€ 2.100.000</p>
-        </div>
-        <div class="prop-card__body">
-          <p class="prop-card__district">SAN MARCO</p>
-          <h3 class="prop-card__title">Flagship Store Frezzeria</h3>
-          <div class="prop-card__divider"></div>
-          <p class="prop-card__meta">340 m²</p>
-          <p class="prop-card__cta">SCOPRI →</p>
-        </div>
-      </a>
-      <!-- Card 5 -->
-      <a href="attivita-commerciali/spazio-espositivo-murano.html" class="prop-card">
-        <div class="prop-card__image">
-          <span class="prop-card__badge"><span>SHOWROOM</span></span>
-          <p class="prop-card__price">€ 420.000</p>
-        </div>
-        <div class="prop-card__body">
-          <p class="prop-card__district">MURANO</p>
-          <h3 class="prop-card__title">Spazio Espositivo Murano</h3>
-          <div class="prop-card__divider"></div>
-          <p class="prop-card__meta">95 m²</p>
-          <p class="prop-card__cta">SCOPRI →</p>
-        </div>
-      </a>
-      <!-- Card 6 -->
-      <a href="attivita-commerciali/locale-cannaregio.html" class="prop-card">
-        <div class="prop-card__image">
-          <span class="prop-card__badge"><span>LOCALE</span></span>
-          <p class="prop-card__price">€ 510.000</p>
-        </div>
-        <div class="prop-card__body">
-          <p class="prop-card__district">CANNAREGIO</p>
-          <h3 class="prop-card__title">Locale Cannaregio</h3>
-          <div class="prop-card__divider"></div>
-          <p class="prop-card__meta">110 m²</p>
-          <p class="prop-card__cta">SCOPRI →</p>
+          <p class="prop-card__meta">70 m² — <span class="t-it">Affitto</span><span class="t-en">Rent</span> 360k €/<span class="t-it">anno</span><span class="t-en">yr</span></p>
+          <p class="prop-card__cta"><span class="t-it">SCOPRI →</span><span class="t-en">DISCOVER →</span></p>
         </div>
       </a>
     </div>
@@ -132,31 +128,34 @@
         <p class="footer__brand-name">GRUPPO SANTA MARINA</p>
         <p class="footer__brand-sub">Immobiliare</p>
         <div class="footer__brand-divider"></div>
-        <p class="footer__brand-desc">Il punto di riferimento<br>per l'immobiliare d'eccellenza<br>nel cuore della Serenissima.</p>
+        <p class="footer__brand-desc">
+          <span class="t-it">Il punto di riferimento<br>per l'immobiliare d'eccellenza<br>nel cuore della Serenissima.</span>
+          <span class="t-en">The reference point<br>for excellent real estate<br>in the heart of Venice.</span>
+        </p>
       </div>
       <div class="footer__col">
-        <p class="footer__col-title">IMMOBILI</p>
+        <p class="footer__col-title"><span class="t-it">IMMOBILI</span><span class="t-en">PROPERTIES</span></p>
         <div class="footer__col-divider"></div>
-        <a href="residenziale.html" class="footer__col-link">Palazzi Storici</a>
-        <a href="residenziale.html" class="footer__col-link">Ville &amp; Residenze</a>
-        <a href="residenziale.html" class="footer__col-link">Appartamenti</a>
-        <a href="retail.html" class="footer__col-link">Attività Commerciali</a>
-        <a href="#" class="footer__col-link">Investimenti</a>
+        <a href="residenziale.html" class="footer__col-link"><span class="t-it">Palazzi Storici</span><span class="t-en">Historic Palaces</span></a>
+        <a href="residenziale.html" class="footer__col-link"><span class="t-it">Ville &amp; Residenze</span><span class="t-en">Villas &amp; Residences</span></a>
+        <a href="residenziale.html" class="footer__col-link"><span class="t-it">Appartamenti</span><span class="t-en">Apartments</span></a>
+        <a href="retail.html" class="footer__col-link"><span class="t-it">Attività Commerciali</span><span class="t-en">Commercial Properties</span></a>
+        <a href="#" class="footer__col-link"><span class="t-it">Investimenti</span><span class="t-en">Investments</span></a>
         <a href="hospitality.html" class="footer__col-link">Retail Hospitality</a>
       </div>
       <div class="footer__col">
-        <p class="footer__col-title">SERVIZI</p>
+        <p class="footer__col-title"><span class="t-it">SERVIZI</span><span class="t-en">SERVICES</span></p>
         <div class="footer__col-divider"></div>
-        <a href="#" class="footer__col-link">Consulenza immobiliare</a>
-        <a href="#" class="footer__col-link">Compravendita</a>
-        <a href="#" class="footer__col-link">Locazioni</a>
-        <a href="#" class="footer__col-link">Gestione Patrimonio</a>
-        <a href="#" class="footer__col-link">Proprietà esclusive</a>
+        <a href="#" class="footer__col-link"><span class="t-it">Consulenza immobiliare</span><span class="t-en">Real Estate Advisory</span></a>
+        <a href="#" class="footer__col-link"><span class="t-it">Compravendita</span><span class="t-en">Sales</span></a>
+        <a href="#" class="footer__col-link"><span class="t-it">Locazioni</span><span class="t-en">Rentals</span></a>
+        <a href="#" class="footer__col-link"><span class="t-it">Gestione Patrimonio</span><span class="t-en">Asset Management</span></a>
+        <a href="#" class="footer__col-link"><span class="t-it">Proprietà esclusive</span><span class="t-en">Exclusive Properties</span></a>
         <a href="#" class="footer__col-link">Virtual Tour</a>
-        <a href="#" class="footer__col-link">Aste Immobiliari</a>
+        <a href="#" class="footer__col-link"><span class="t-it">Aste Immobiliari</span><span class="t-en">Real Estate Auctions</span></a>
       </div>
       <div class="footer__col">
-        <p class="footer__col-title">SEDE OPERATIVA</p>
+        <p class="footer__col-title"><span class="t-it">SEDE OPERATIVA</span><span class="t-en">OFFICE</span></p>
         <div class="footer__col-divider"></div>
         <p class="footer__col-address">Venezia - Castello 5893<br>Campo Santa Marina<br>Cap 30122</p>
       </div>
@@ -166,12 +165,13 @@
       <div class="footer__legal-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Cookie Policy</a>
-        <a href="#">Note Legali</a>
+        <a href="#"><span class="t-it">Note Legali</span><span class="t-en">Legal Notes</span></a>
         <a href="#">GDPR</a>
       </div>
     </div>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="../assets/js/main.js"></script>
 </body>
 </html>
