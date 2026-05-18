@@ -56,7 +56,12 @@ gruppo-santa-marina/
 │       ├── negozio-canal-grande.html
 │       ├── palazzetto-commerciale.html     → slider 9 foto
 │       ├── showroom-rialto.html
-│       └── spazio-espositivo-murano.html
+│       ├── spazio-espositivo-murano.html
+│       ├── negozio-calle-spadaria.html     → slider 5 foto, key money €150.000
+│       ├── locale-lista-spagna.html        → slider 5 foto, key money €150.000
+│       ├── locazione-merceria-orologio.html → slider 5 foto, affitto €10.000/mese
+│       ├── negozio-calle-fuseri.html       → slider 5 foto, key money €100.000
+│       └── flagship-frezzaria.html         → slider 5 foto, affitto €20.000/mese
 └── docs/
     ├── prd.md              → Product Requirements Document
     └── userstories.md      → User Stories
