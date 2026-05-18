@@ -50,6 +50,7 @@ gruppo-santa-marina/
 │       ├── flagship-store-frezzeria.html
 │       ├── locale-cannaregio.html
 │       ├── negozio-canal-grande.html
+│       ├── palazzetto-commerciale.html     → slider 9 foto
 │       ├── showroom-rialto.html
 │       └── spazio-espositivo-murano.html
 └── docs/
@@ -160,7 +161,6 @@ Questa regola è definita in `CLAUDE.md` e nell'hook Stop in `.claude/settings.j
 - [x] Animazioni AOS
 - [x] Switch lingua IT/EN (tutte le pagine)
 - [x] Filtri nelle pagine categoria
-- [ ] Aggiungere immagini reali delle proprietà
 - [ ] Configurare Formspree con ID account reale
 - [ ] SEO: meta description, Open Graph, sitemap.xml
 - [ ] Deploy (hosting + dominio)
