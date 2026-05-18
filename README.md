@@ -17,10 +17,17 @@ gruppo-santa-marina/
 │   └── img/
 │       └── logo.png        → Logo aziendale
 ├── pages/
-│   ├── retail.html         → Categoria: spazi commerciali
-│   ├── hospitality.html    → Categoria: strutture ricettive
-│   ├── residenziale.html   → Categoria: immobili residenziali
-│   └── immobile.html       → Pagina dettaglio singolo immobile
+│   ├── retail.html                         → Categoria: spazi commerciali
+│   ├── hospitality.html                    → Categoria: strutture ricettive
+│   ├── residenziale.html                   → Categoria: immobili residenziali
+│   ├── immobile.html                       → Template dettaglio immobile
+│   └── residenziale/
+│       ├── residenza-san-polo.html         → Residenza San Polo (slider 15 foto, giardino 500 m²)
+│       ├── palazzo-venier.html
+│       ├── ca-grimani-loft.html
+│       ├── residenza-torcello.html
+│       ├── appartamento-rialto.html
+│       └── attico-san-marco.html
 └── docs/
     ├── prd.md              → Product Requirements Document
     └── userstories.md      → User Stories
