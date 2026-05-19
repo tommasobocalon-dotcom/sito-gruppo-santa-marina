@@ -36,7 +36,7 @@
   <!-- Hero -->
   <section class="hero" id="immobili">
     <video class="hero__video" autoplay muted loop playsinline>
-      <source src="212268.mp4" type="video/mp4">
+      <source src="assets/img/212268.mp4" type="video/mp4">
     </video>
     <div class="hero__overlay"></div>
     <div class="hero__cards">
@@ -267,7 +267,8 @@
   <script src="assets/js/main.js"></script>
   <script>
     (function () {
-      var nome = localStorage.getItem('richiesta_immobile');
+      var params = new URLSearchParams(window.location.search);
+      var nome = params.get('immobile') || localStorage.getItem('richiesta_immobile');
       if (!nome) return;
       localStorage.removeItem('richiesta_immobile');
       var campo = document.querySelector('input[name="oggetto"]');

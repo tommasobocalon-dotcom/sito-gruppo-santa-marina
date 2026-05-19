@@ -156,7 +156,10 @@ document.addEventListener('DOMContentLoaded', function () {
     detailCta.addEventListener('click', function (e) {
       e.preventDefault();
       localStorage.setItem('richiesta_immobile', propName);
-      window.location.href = detailCta.getAttribute('href');
+      var href = detailCta.getAttribute('href');
+      var base = href.replace(/#.*$/, '');
+      var hash = (href.match(/#.*$/) || [''])[0];
+      window.location.href = base + '?immobile=' + encodeURIComponent(propName) + hash;
     });
   }
 
