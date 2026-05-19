@@ -120,6 +120,7 @@
           <input class="form-field" type="tel" name="telefono" placeholder="Telefono" data-placeholder-en="Phone">
         </div>
         <input class="form-field form-field--wide" type="email" name="email" placeholder="Indirizzo Email" data-placeholder-en="Email Address">
+        <input class="form-field form-field--wide" type="text" name="oggetto" placeholder="Oggetto" data-placeholder-en="Subject">
         <textarea class="form-field form-field--wide form-field--textarea" name="messaggio" placeholder="Il tuo messaggio…" data-placeholder-en="Your message…"></textarea>
         <button class="form-submit" type="submit">
           <span class="t-it">INVIA RICHIESTA</span><span class="t-en">SEND REQUEST</span>
@@ -257,5 +258,14 @@
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      var nome = localStorage.getItem('richiesta_immobile');
+      if (!nome) return;
+      localStorage.removeItem('richiesta_immobile');
+      var campo = document.querySelector('input[name="oggetto"]');
+      if (campo) campo.value = 'Richiesta informazioni "' + nome + '"';
+    })();
+  </script>
 </body>
 </html>

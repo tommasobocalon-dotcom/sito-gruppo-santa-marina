@@ -141,6 +141,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  // ─── Detail CTA: salva nome immobile e naviga ───
+  var detailCta   = document.querySelector('a.detail-card-cta');
+  var detailTitle = document.querySelector('h1.detail-title');
+  if (detailCta && detailTitle) {
+    var propName = detailTitle.innerHTML
+      .replace(/<br\s*\/?>/gi, ' ')
+      .replace(/<[^>]+>/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+    propName = propName.split(' ')
+      .map(function (w) { return w.charAt(0).toUpperCase() + w.slice(1); })
+      .join(' ');
+    detailCta.addEventListener('click', function (e) {
+      e.preventDefault();
+      localStorage.setItem('richiesta_immobile', propName);
+      window.location.href = detailCta.getAttribute('href');
+    });
+  }
+
   // ─── Lightbox ───
   var photos = Array.from(document.querySelectorAll('.detail-photo img'));
   if (!photos.length) return;
