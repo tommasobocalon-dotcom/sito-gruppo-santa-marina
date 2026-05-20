@@ -54,19 +54,19 @@
       <span class="t-it">Tipo</span><span class="t-en">Type</span>
     </label>
     <select class="filters__select" id="filter-tipo">
-      <option value=""><span class="t-it">Tutti</span><span class="t-en">All</span></option>
+      <option value="" data-it="Tutti" data-en="All">Tutti</option>
       <option value="residenza">Residenza</option>
       <option value="palazzo">Palazzo</option>
       <option value="villa">Villa</option>
       <option value="appartamento">Appartamento</option>
-      <option value="isola-privata"><span class="t-it">Isola Privata</span><span class="t-en">Private Island</span></option>
+      <option value="isola-privata" data-it="Isola Privata" data-en="Private Island">Isola Privata</option>
     </select>
 
     <label class="filters__label" for="filter-zona">
       <span class="t-it">Zona</span><span class="t-en">Area</span>
     </label>
     <select class="filters__select" id="filter-zona">
-      <option value=""><span class="t-it">Tutte</span><span class="t-en">All</span></option>
+      <option value="" data-it="Tutte" data-en="All">Tutte</option>
       <option value="san-polo">San Polo</option>
       <option value="laguna-veneta">Laguna Veneta</option>
       <option value="cannaregio">Cannaregio</option>
@@ -79,7 +79,7 @@
       <span class="t-it">Prezzo max</span><span class="t-en">Max price</span>
     </label>
     <select class="filters__select" id="filter-prezzo">
-      <option value="0"><span class="t-it">Tutti</span><span class="t-en">All</span></option>
+      <option value="0" data-it="Tutti" data-en="All">Tutti</option>
       <option value="1700000">≤ € 1.700.000</option>
       <option value="2000000">≤ € 2.000.000</option>
       <option value="2500000">≤ € 2.500.000</option>
@@ -96,7 +96,7 @@
     <div class="listings__row">
       <a href="residenziale/residenza-san-polo.html" class="prop-card"
          data-tipo="residenza" data-zona="san-polo" data-prezzo-min="3000000">
-        <div class="prop-card__image" style="background-image: url('../assets/img/residenziale/sanpolo1.webp'); background-size: cover; background-position: center;">
+        <div class="prop-card__image" style="background-image: url('https://pub-f08ddb231b1e40a7b7657379d8292567.r2.dev/residenziale/sanpolo1.webp'); background-size: cover; background-position: center;">
           <span class="prop-card__badge"><span class="t-it">RESIDENZA</span><span class="t-en">RESIDENCE</span></span>
           <p class="prop-card__price">€ 3.000.000</p>
         </div>
@@ -110,7 +110,7 @@
       </a>
       <a href="residenziale/isola-di-crevan.html" class="prop-card"
          data-tipo="isola-privata" data-zona="laguna-veneta" data-prezzo-min="0">
-        <div class="prop-card__image" style="background-image: url('../assets/img/residenziale/isola1.webp'); background-size: cover; background-position: center;">
+        <div class="prop-card__image" style="background-image: url('https://pub-f08ddb231b1e40a7b7657379d8292567.r2.dev/residenziale/isola1.webp'); background-size: cover; background-position: center;">
           <span class="prop-card__badge"><span class="t-it">ISOLA PRIVATA</span><span class="t-en">PRIVATE ISLAND</span></span>
           <p class="prop-card__price"><span class="t-it">Su Richiesta</span><span class="t-en">On Request</span></p>
         </div>
@@ -124,7 +124,7 @@
       </a>
       <a href="residenziale/residenza-san-leonardo.html" class="prop-card"
          data-tipo="palazzo" data-zona="cannaregio" data-prezzo-min="2000000">
-        <div class="prop-card__image" style="background-image: url('../assets/img/residenziale/cannaregio2.webp'); background-size: cover; background-position: center;">
+        <div class="prop-card__image" style="background-image: url('https://pub-f08ddb231b1e40a7b7657379d8292567.r2.dev/residenziale/cannaregio2.webp'); background-size: cover; background-position: center;">
           <span class="prop-card__badge"><span class="t-it">PALAZZO GOTICO</span><span class="t-en">GOTHIC PALACE</span></span>
           <p class="prop-card__price">€ 2.000.000</p>
         </div>
@@ -140,7 +140,7 @@
     <div class="listings__row">
       <a href="residenziale/villa-ca-barbero.html" class="prop-card"
          data-tipo="villa" data-zona="colli-euganei" data-prezzo-min="1700000">
-        <div class="prop-card__image" style="background-image: url('../assets/img/residenziale/cabarbaro1.webp'); background-size: cover; background-position: center;">
+        <div class="prop-card__image" style="background-image: url('https://pub-f08ddb231b1e40a7b7657379d8292567.r2.dev/residenziale/cabarbaro1.webp'); background-size: cover; background-position: center;">
           <span class="prop-card__badge"><span class="t-it">VILLA STORICA</span><span class="t-en">HISTORIC VILLA</span></span>
           <p class="prop-card__price">€ 1.700.000</p>
         </div>
@@ -154,7 +154,7 @@
       </a>
       <a href="residenziale/residenza-santanzolo.html" class="prop-card"
          data-tipo="residenza" data-zona="san-marco" data-prezzo-min="1700000">
-        <div class="prop-card__image" style="background-image: url('../assets/img/residenziale/angelo1.webp'); background-size: cover; background-position: center;">
+        <div class="prop-card__image" style="background-image: url('https://pub-f08ddb231b1e40a7b7657379d8292567.r2.dev/residenziale/angelo1.webp'); background-size: cover; background-position: center;">
           <span class="prop-card__badge"><span class="t-it">RESIDENZA</span><span class="t-en">RESIDENCE</span></span>
           <p class="prop-card__price">€ 1.700.000</p>
         </div>
@@ -168,7 +168,7 @@
       </a>
       <a href="residenziale/residenza-cortina.html" class="prop-card"
          data-tipo="appartamento" data-zona="cortina" data-prezzo-min="2500000">
-        <div class="prop-card__image" style="background-image: url('../assets/img/residenziale/cort1.webp'); background-size: cover; background-position: center;">
+        <div class="prop-card__image" style="background-image: url('https://pub-f08ddb231b1e40a7b7657379d8292567.r2.dev/residenziale/cort1.webp'); background-size: cover; background-position: center;">
           <span class="prop-card__badge"><span class="t-it">APPARTAMENTO</span><span class="t-en">APARTMENT</span></span>
           <p class="prop-card__price">€ 2.500.000</p>
         </div>
@@ -185,7 +185,7 @@
       <!-- Palazzo XV Secolo — Rialto -->
       <a href="residenziale/palazzo-rialto.html" class="prop-card"
          data-tipo="palazzo" data-zona="rialto" data-prezzo-min="0">
-        <div class="prop-card__image" style="background-image: url('../assets/img/residenziale/Palazzo/palazzo1.webp'); background-size: cover; background-position: center;">
+        <div class="prop-card__image" style="background-image: url('https://pub-f08ddb231b1e40a7b7657379d8292567.r2.dev/residenziale/Palazzo/palazzo1.webp'); background-size: cover; background-position: center;">
           <span class="prop-card__badge"><span class="t-it">PALAZZO STORICO</span><span class="t-en">HISTORIC PALACE</span></span>
           <p class="prop-card__price"><span class="t-it">Su Richiesta</span><span class="t-en">On Request</span></p>
         </div>

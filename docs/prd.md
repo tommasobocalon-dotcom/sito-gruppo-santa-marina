@@ -127,6 +127,10 @@ Ancora fuori scope:
 | RF-15 | Scroll-to-top button | Bassa | ✅ |
 | RF-16 | Animazioni AOS allo scroll | Bassa | ✅ |
 | RF-17 | Ottimizzazione immagini WebP | Media | ✅ (237 immagini convertite) |
+| RF-18 | Navbar con dropdown IMMOBILI su tutte le pagine | Alta | ✅ |
+| RF-19 | Pre-fill campo Oggetto form da pagina dettaglio | Media | ✅ |
+| RF-20 | Sezione Ristorazione in retail.html con 9 pagine dettaglio | Alta | ✅ |
+| RF-21 | Responsive mobile slider e separator ristorazione | Alta | ✅ |
 
 ---
 

@@ -61,7 +61,16 @@ gruppo-santa-marina/
 │       ├── locale-lista-spagna.html        → slider 5 foto, key money €150.000
 │       ├── locazione-merceria-orologio.html → slider 5 foto, affitto €10.000/mese
 │       ├── negozio-calle-fuseri.html       → slider 5 foto, key money €100.000
-│       └── flagship-frezzaria.html         → slider 5 foto, affitto €20.000/mese
+│       ├── flagship-frezzaria.html         → slider 5 foto, affitto €20.000/mese
+│       ├── ristorante-castello.html        → key money €1.200.000, 36+22 coperti
+│       ├── ristorante-dorsoduro.html       → key money €750.000, 30+48 coperti
+│       ├── ristorante-cannaregio.html      → key money €820.000, 50 coperti
+│       ├── ristorante-cannaregio-2.html    → key money €1.550.000, 50+40 coperti
+│       ├── ristorante-santa-croce.html     → key money €1.500.000, 40+22 coperti
+│       ├── ristorante-castello-2.html      → key money €3.000.000, 80+100 coperti
+│       ├── ristorante-san-marco.html       → key money €1.500.000, 90+50 coperti
+│       ├── ristorante-cannaregio-3.html    → key money €1.300.000, 40+20 coperti
+│       └── pizza-al-taglio.html            → su richiesta, Strada Nova
 └── docs/
     ├── prd.md              → Product Requirements Document
     └── userstories.md      → User Stories
@@ -172,6 +181,10 @@ Questa regola è definita in `CLAUDE.md` e nell'hook Stop in `.claude/settings.j
 - [x] Switch lingua IT/EN (tutte le pagine)
 - [x] Filtri nelle pagine categoria
 - [x] Ottimizzazione immagini WebP (237 file convertiti)
+- [x] Navbar con dropdown IMMOBILI (3 categorie) su tutte le pagine
+- [x] Pre-fill form contatti da pagina dettaglio (campo Oggetto)
+- [x] 9 pagine dettaglio ristoranti + cards collegate in retail.html
+- [x] Responsive mobile completo per slider e separator ristorazione
 - [ ] Configurare Formspree con ID account reale
 - [ ] SEO: meta description, Open Graph, sitemap.xml
 - [ ] Deploy (hosting + dominio)

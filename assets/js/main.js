@@ -4,6 +4,24 @@ document.addEventListener('DOMContentLoaded', function () {
   var lang = localStorage.getItem('lang') || 'it';
   document.documentElement.lang = lang;
 
+  // Salva i placeholder italiani originali prima di sovrascriverli
+  document.querySelectorAll('[data-placeholder-en]').forEach(function (el) {
+    el.dataset.placeholderIt = el.placeholder;
+  });
+
+  function applyLang(l) {
+    // Testo delle <option> con data-it / data-en
+    document.querySelectorAll('option[data-it]').forEach(function (opt) {
+      opt.textContent = l === 'en' ? opt.dataset.en : opt.dataset.it;
+    });
+    // Placeholder dei campi form
+    document.querySelectorAll('[data-placeholder-en]').forEach(function (el) {
+      el.placeholder = l === 'en' ? el.dataset.placeholderEn : el.dataset.placeholderIt;
+    });
+  }
+
+  applyLang(lang);
+
   var navbar = document.querySelector('.navbar');
   if (navbar) {
     var langBtn = document.createElement('button');
@@ -18,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
       localStorage.setItem('lang', lang);
       document.documentElement.lang = lang;
       langBtn.textContent = lang === 'it' ? 'EN' : 'IT';
+      applyLang(lang);
     });
   }
 

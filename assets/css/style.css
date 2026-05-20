@@ -88,12 +88,13 @@ img { display: block; max-width: 100%; }
 .navbar__item:hover > a::after { transform: rotate(180deg); }
 .navbar__dropdown {
   position: absolute;
-  top: calc(100% + 14px);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(-6px);
   background: var(--dark);
   border: 1px solid rgba(201, 165, 90, 0.22);
   min-width: 240px;
+  padding-top: 14px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -1102,6 +1103,10 @@ img { display: block; max-width: 100%; }
   .detail-content { padding: 56px 48px; gap: 48px; }
   .detail-title { font-size: 52px; }
   .detail-right-card { width: 280px; }
+  .detail-slider { height: 420px; }
+  .ristorazione__sep { margin: 40px -48px 52px; padding: 40px 48px; }
+  .ristorazione__sep::before,
+  .ristorazione__sep::after { left: 40px; right: 40px; }
 }
 
 /* ── 4. Tablet portrait (768px – 1024px) ── */
@@ -1151,42 +1156,41 @@ img { display: block; max-width: 100%; }
   }
   .navbar__links .navbar__dropdown-link:hover { color: var(--red); padding-left: 16px; }
 
-  /* Hero: dark area + 2-col cards */
-  .hero { height: auto; overflow: visible; }
+  /* Hero: 2-col grid su sfondo scuro */
+  .hero {
+    height: auto;
+    overflow: hidden;
+    padding: 52px 40px 44px;
+  }
+  .hero__video { display: none; }
   .hero__overlay { display: none; }
+  .hero::before { display: none; }
   .hero__cards {
     position: relative;
     top: auto; transform: none;
     left: auto; right: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: unset;
-    gap: 0;
-    background: linear-gradient(160deg, rgb(18,15,13) 0%, rgb(51,36,28) 50%, rgb(10,8,8) 100%);
-  }
-  .hero::before {
-    content: '';
-    display: block;
-    height: 300px;
-    background: linear-gradient(160deg, rgb(18,15,13) 13%, rgb(51,36,28) 42%, rgb(33,23,18) 72%, rgb(10,8,8) 100%);
+    gap: 20px;
+    background: transparent;
+    padding: 0;
   }
   .hero__card {
     width: 100%;
-    height: 220px;
-    padding: 20px 32px 24px;
-    border-right: 1px solid rgba(255,255,255,0.1);
+    height: auto;
+    min-height: 210px;
+    padding: 22px 28px 26px;
+    border-right: none;
     border-bottom: none;
-    box-shadow: none;
-    background: rgba(255,255,255,0.97);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.32);
+    background: #fff;
   }
-  .hero__card:nth-child(2) { border-right: none; }
   .hero__card:nth-child(3) {
     grid-column: 1 / -1;
-    width: 50%;
-    border-right: none;
-    border-top: 1px solid var(--border);
+    border-top: none;
   }
-  .hero__card-title { font-size: 24px; }
+  .hero__card-title { font-size: 24px; flex: none; margin-bottom: 10px; }
+  .hero__card-desc { margin-bottom: 0; }
 
   /* Chi Siamo: side by side but smaller */
   .chi-siamo { height: auto; overflow: visible; }
@@ -1245,6 +1249,10 @@ img { display: block; max-width: 100%; }
   .detail-stats { gap: 24px; flex-wrap: wrap; }
   .detail-photos { flex-wrap: wrap; }
   .detail-photo { width: calc(50% - 4px); height: 140px; }
+  .detail-slider { height: 380px; }
+  .ristorazione__sep { margin: 36px -40px 48px; padding: 40px 40px; }
+  .ristorazione__sep::before,
+  .ristorazione__sep::after { left: 32px; right: 32px; }
 }
 
 /* ── 5. Mobile (≤ 767px) ── */
@@ -1299,37 +1307,39 @@ img { display: block; max-width: 100%; }
   }
   .navbar__links .navbar__dropdown-link:hover { color: var(--red); padding-left: 14px; }
 
-  /* Hero */
-  .hero { height: auto; overflow: visible; }
-  .hero__overlay { display: none; }
-  .hero::before {
-    content: '';
-    display: block;
-    height: 220px;
-    background: linear-gradient(160deg, rgb(18,15,13) 13%, rgb(51,36,28) 42%, rgb(33,23,18) 72%, rgb(10,8,8) 100%);
+  /* Hero: stack verticale con foto Venezia da Unsplash */
+  .hero {
+    height: auto;
+    overflow: hidden;
+    padding: 32px 20px 28px;
+    background-image: url('https://images.unsplash.com/photo-1520175480921-4edfa2983e0f?w=3840&q=85&fit=crop&auto=format');
+    background-size: cover;
+    background-position: center;
   }
+  .hero__video { display: none; }
+  .hero__overlay { display: block; }
+  .hero::before { display: none; }
   .hero__cards {
     position: relative;
     top: auto; transform: none;
     left: auto; right: auto;
+    display: flex;
     flex-direction: column;
-    justify-content: unset;
-    gap: 16px;
-    padding: 20px 16px 24px;
-    background: linear-gradient(to bottom, rgb(33,23,18), rgb(10,8,8));
+    gap: 12px;
+    background: transparent;
+    padding: 0;
   }
   .hero__card {
     width: 100%;
     height: auto;
-    padding: 20px 24px 24px;
+    padding: 20px 22px 22px;
     border-right: none;
     border-bottom: none;
-    box-shadow: none;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.28);
     background: #fff;
   }
-  .hero__card:last-child { border-bottom: none; }
-  .hero__card-title { font-size: 24px; margin-bottom: 10px; }
-  .hero__card-desc { font-size: 13px; }
+  .hero__card-title { font-size: 22px; flex: none; margin-bottom: 8px; }
+  .hero__card-desc { font-size: 13px; margin-bottom: 0; }
 
   /* Chi Siamo: stacked */
   .chi-siamo { flex-direction: column; height: auto; overflow: visible; }
@@ -1383,12 +1393,25 @@ img { display: block; max-width: 100%; }
   .detail-hero__counter { right: 24px; bottom: 16px; }
   .detail-content { flex-direction: column; padding: 36px 24px; gap: 32px; }
   .detail-title { font-size: 36px; }
-  .detail-stats { gap: 20px; flex-wrap: wrap; }
+  .detail-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 16px; }
   .detail-stat-val { font-size: 18px; }
   .detail-right-card { width: 100%; position: static; }
   .detail-photos { flex-direction: column; gap: 8px; }
   .detail-photo { width: 100%; height: 180px; }
+  .detail-photos--wrap .detail-photo { width: 100%; height: 200px; }
   .detail-desc-title { font-size: 22px; }
+  /* Detail slider */
+  .detail-slider { height: 260px; }
+  .detail-slider__counter { right: 16px; bottom: 12px; }
+  .detail-slider__btn { width: 40px; height: 40px; font-size: 16px; }
+  .detail-slider__btn--prev { left: 10px; }
+  .detail-slider__btn--next { right: 10px; }
+  /* Ristorazione separator */
+  .ristorazione__sep { margin: 28px -24px 36px; padding: 36px 24px; }
+  .ristorazione__sep::before,
+  .ristorazione__sep::after { left: 16px; right: 16px; }
+  .ristorazione__sep-label { font-size: 26px; letter-spacing: 4px; }
+  .ristorazione__sep-sub { font-size: 9px; letter-spacing: 3px; }
 }
 
 /* ── 6. Small mobile (≤ 390px) ── */
@@ -1396,9 +1419,9 @@ img { display: block; max-width: 100%; }
   .navbar { padding: 0 16px; }
   .navbar__logo-name { font-size: 14px; letter-spacing: 1.5px; }
 
-  .hero::before { height: 180px; }
-  .hero__card { padding: 18px 20px 22px; }
-  .hero__card-title { font-size: 22px; }
+  .hero { padding: 24px 16px 22px; }
+  .hero__card { padding: 18px 18px 20px; }
+  .hero__card-title { font-size: 20px; }
 
   .chi-siamo__right { padding: 40px 20px; }
   .chi-siamo__heading { font-size: 30px; }
@@ -1415,6 +1438,11 @@ img { display: block; max-width: 100%; }
   .listings { padding: 28px 20px; }
   .detail-content { padding: 28px 20px; }
   .detail-title { font-size: 30px; }
+  .detail-slider { height: 210px; }
+  .ristorazione__sep { margin: 20px -20px 28px; padding: 28px 20px; }
+  .ristorazione__sep::before,
+  .ristorazione__sep::after { left: 12px; right: 12px; }
+  .ristorazione__sep-label { font-size: 20px; letter-spacing: 3px; }
 }
 
 /* ─── Cookie Banner ─── */
@@ -1587,8 +1615,17 @@ html[lang="it"] .t-en { display: none !important; }
   .cookie-banner__actions { width: 100%; }
   .cookie-banner__accept,
   .cookie-banner__decline { flex: 1; text-align: center; }
-  .filters { padding: 14px 24px; gap: 10px; }
-  .filters__select { min-width: 140px; }
+  /* Filters: 2-col grid, labels nascosti */
+  .filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 12px 20px;
+  }
+  .filters__label { display: none; }
+  .filters__select { width: 100%; min-width: unset; height: 44px; }
+  .filters__select:last-of-type:nth-of-type(n+3) { grid-column: 1 / -1; }
+  .filters__reset { grid-column: 1 / -1; margin-left: 0; text-align: center; padding-top: 6px; font-size: 13px; }
   .scroll-top { bottom: 20px; right: 20px; width: 40px; height: 40px; font-size: 16px; }
   .navbar__lang { padding: 5px 10px; font-size: 11px; }
   .contatti__map-label { padding: 10px 24px; font-size: 12px; }

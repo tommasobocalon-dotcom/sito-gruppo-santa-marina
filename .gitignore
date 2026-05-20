@@ -1,11 +1,12 @@
-# Video (troppo grande per GitHub — max 100 MB)
-assets/img/*.mp4
-assets/img/*.mov
-assets/img/*.avi
-assets/img/*.webm
+# Immagini e video — serviti da Cloudflare R2
+assets/img/
 
 # OS
 .DS_Store
 Thumbs.db
-212268.mp4
-*.mp4
+
+# Script di upload
+upload-r2.sh
+
+# Wrangler cache locale
+.wrangler/
