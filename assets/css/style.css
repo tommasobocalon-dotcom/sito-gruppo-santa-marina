@@ -1153,8 +1153,9 @@ img { display: block; max-width: 100%; }
     color: rgba(15,15,15,0.55);
     border-bottom: none;
     letter-spacing: 1.5px;
+    transition: color 0.18s;
   }
-  .navbar__links .navbar__dropdown-link:hover { color: var(--red); padding-left: 16px; }
+  .navbar__links .navbar__dropdown-link:hover { color: var(--red); }
 
   /* Hero: 2-col grid su sfondo scuro */
   .hero {
@@ -1304,8 +1305,9 @@ img { display: block; max-width: 100%; }
     color: rgba(15,15,15,0.55);
     border-bottom: none;
     letter-spacing: 1.5px;
+    transition: color 0.18s;
   }
-  .navbar__links .navbar__dropdown-link:hover { color: var(--red); padding-left: 14px; }
+  .navbar__links .navbar__dropdown-link:hover { color: var(--red); }
 
   /* Hero: stack verticale con foto Venezia da Unsplash */
   .hero {

@@ -46,6 +46,11 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ─── Cookie Banner ───
+  // Se l'utente aveva già accettato in una sessione precedente, aggiorna subito il consenso GA
+  if (localStorage.getItem('cookie-consent') === 'all' && typeof gtag === 'function') {
+    gtag('consent', 'update', { 'analytics_storage': 'granted' });
+  }
+
   if (!localStorage.getItem('cookie-consent')) {
     var banner = document.createElement('div');
     banner.className = 'cookie-banner';
@@ -70,7 +75,12 @@ document.addEventListener('DOMContentLoaded', function () {
       banner.style.opacity = '0';
       setTimeout(function () { banner.remove(); }, 320);
     }
-    document.getElementById('cookie-accept').addEventListener('click', function () { dismissBanner('all'); });
+    document.getElementById('cookie-accept').addEventListener('click', function () {
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+      }
+      dismissBanner('all');
+    });
     document.getElementById('cookie-decline').addEventListener('click', function () { dismissBanner('necessary'); });
   }
 
