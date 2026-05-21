@@ -72,6 +72,8 @@ Non chiedere conferma: aggiorna sempre i file MD alla fine del turno se hai tocc
 ## Componenti ricorrenti
 
 - **Navbar**: `.navbar` / `.navbar--inner` (homepage vs inner pages); il pulsante `.navbar__lang` è iniettato da JS
+- **Logo navbar**: `.navbar__left` (container flex) contiene: `.navbar__logo` (testo "GRUPPO SANTA MARINA" + "Immobiliare", sempre visibile) + `.navbar__logos` (flex con divisore + `logo-santa-marina.webp` + divisore + `logo-mapic.webp`); `.navbar__logos` è nascosto su mobile (≤1024px)
+- **Bottone lingua**: iniettato da JS come **primo elemento** di `#nav-links` (così appare prima di IMMOBILI sia su desktop che nel menu hamburger su mobile)
 - **Footer**: stesso blocco HTML in tutte le pagine (con spans `.t-it`/`.t-en`)
 - **Property card**: `.prop-card` usata nelle pagine categoria; usare `data-tipo`, `data-zona`, `data-prezzo-min` per i filtri
 - **Category header**: `.cat-header` con sfondo rosso
@@ -118,6 +120,8 @@ Font UI/body: Inter (400 regular, 600 semibold)
 - Le immagini delle proprietà sono **placeholder** (background scuro). Vanno sostituite con foto reali dentro `.prop-card__image` e `.detail-hero`
 - Il form contatti non ha backend: va collegato a un servizio (es. Formspree, Netlify Forms)
 - `pages/immobile.html` è un template statico: in produzione andrà reso dinamico (es. con parametri URL o CMS)
-- Il logo (`assets/img/logo.webp`) è in formato WebP (convertito da PNG); va sostituito con il file definitivo se necessario
+- Tutte le immagini e i loghi sono su **Cloudflare R2** (`https://pub-e64c7985faf1457cb15df456ecb3d49a.r2.dev/`); nessun file immagine è nel repository
+- `logo-santa-marina.webp` e `logo-mapic.webp` sono nella root del bucket R2 (caricati con `npx wrangler r2 object put`)
+- Per ricaricare le immagini degli immobili usare `bash upload-r2.sh` (richiede wrangler autenticato)
 - Tutte le immagini del sito sono in formato **WebP** (qualità 85, convertite con Python Pillow); non aggiungere JPG/PNG senza convertirli
 - I percorsi relativi nelle pagine in `pages/` usano `../` per risalire alla radice (es. `../assets/css/style.css`, `../index.html`)

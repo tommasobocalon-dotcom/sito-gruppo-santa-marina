@@ -22,14 +22,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   applyLang(lang);
 
-  var navbar = document.querySelector('.navbar');
-  if (navbar) {
+  var navLinks = document.getElementById('nav-links');
+  if (navLinks) {
     var langBtn = document.createElement('button');
     langBtn.className = 'navbar__lang';
     langBtn.id = 'lang-toggle';
     langBtn.setAttribute('aria-label', 'Cambia lingua / Switch language');
     langBtn.textContent = lang === 'it' ? 'EN' : 'IT';
-    navbar.appendChild(langBtn);
+    navLinks.insertBefore(langBtn, navLinks.firstChild);
 
     langBtn.addEventListener('click', function () {
       lang = lang === 'it' ? 'en' : 'it';
