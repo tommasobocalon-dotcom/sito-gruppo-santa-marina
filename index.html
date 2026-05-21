@@ -145,12 +145,15 @@
         <span class="t-it">Un nostro consulente ti risponderà entro 24 ore.</span>
         <span class="t-en">One of our consultants will respond within 24 hours.</span>
       </p>
-      <form action="https://formspree.io/f/mlgvbjlo" method="post">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="97a91072-1635-48d0-8348-e32994cda8da">
+        <input type="hidden" name="subject" value="Nuova richiesta dal sito Gruppo Santa Marina">
+        <input type="hidden" name="from_name" value="Gruppo Santa Marina Sito">
         <div class="form-row">
-          <input class="form-field" type="text" name="nome" placeholder="Nome e Cognome" data-placeholder-en="Full Name">
+          <input class="form-field" type="text" name="nome" placeholder="Nome e Cognome" data-placeholder-en="Full Name" required>
           <input class="form-field" type="tel" name="telefono" placeholder="Telefono" data-placeholder-en="Phone">
         </div>
-        <input class="form-field form-field--wide" type="email" name="email" placeholder="Indirizzo Email" data-placeholder-en="Email Address">
+        <input class="form-field form-field--wide" type="email" name="email" placeholder="Indirizzo Email" data-placeholder-en="Email Address" required>
         <input class="form-field form-field--wide" type="text" name="oggetto" placeholder="Oggetto" data-placeholder-en="Subject">
         <textarea class="form-field form-field--wide form-field--textarea" name="messaggio" placeholder="Il tuo messaggio…" data-placeholder-en="Your message…"></textarea>
         <button class="form-submit" type="submit">
