@@ -1678,7 +1678,16 @@ html[lang="it"] .t-en { display: none !important; }
 /* ─── Responsive additions ─── */
 @media (max-width: 1024px) and (min-width: 768px) {
   .cookie-banner { padding: 20px 40px; }
-  .filters { padding: 16px 40px; }
+  .filters {
+    padding: 14px 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px;
+    align-items: center;
+  }
+  .filters__label { display: none; }
+  .filters__select { flex: 1; min-width: 0; height: 42px; }
+  .filters__reset { flex-shrink: 0; margin-left: 8px; }
   .scroll-top { bottom: 28px; right: 28px; }
   .contatti__map-label { padding: 10px 40px; }
 }
