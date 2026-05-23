@@ -1244,6 +1244,7 @@ img { display: block; max-width: 100%; }
   .hero__card:nth-child(3) {
     grid-column: 1 / -1;
     max-width: calc(50% - 10px);
+    margin: 0 auto;
     border-top: none;
   }
   .hero__card-title { font-size: 24px; flex: none; margin-bottom: 10px; }
@@ -1268,14 +1269,15 @@ img { display: block; max-width: 100%; }
   .contatti__office { padding: 36px 40px; gap: 20px; }
   .form-row { gap: 12px; }
 
-  /* Footer: 2×2 grid */
+  /* Footer: brand full + 3 col uguali */
   .footer__main {
-    padding: 64px 40px;
-    flex-wrap: wrap;
-    gap: 48px;
+    padding: 56px 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 32px;
   }
-  .footer__brand { width: 100%; }
-  .footer__col { width: calc(50% - 24px); }
+  .footer__brand { grid-column: 1 / -1; }
+  .footer__col { width: auto; }
   .footer__legal { padding: 0 40px; flex-direction: row; height: 56px; }
   .footer__legal-copy { font-size: 10px; }
 
@@ -1284,18 +1286,20 @@ img { display: block; max-width: 100%; }
   .cat-header__title { font-size: 44px; }
   .cat-header__sub { font-size: 14px; }
 
-  /* Listings: 2-col grid */
-  .listings { padding: 48px 40px; }
-  .listings__row {
+  /* Listings: sempre 2 per riga — grid sul container, rows trasparenti */
+  .listings {
+    padding: 48px 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
-    margin-bottom: 24px;
+  }
+  .listings__row {
+    display: contents;
   }
   .prop-card { width: 100%; }
   .listings__row .prop-card:nth-child(3) {
-    grid-column: 1 / -1;
-    max-width: calc(50% - 12px);
+    grid-column: auto;
+    max-width: none;
   }
 
   /* Property detail */
