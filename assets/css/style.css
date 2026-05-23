@@ -1324,7 +1324,8 @@ img { display: block; max-width: 100%; }
   .navbar {
     height: 68px;
     padding: 0 24px;
-    position: relative;
+    position: sticky;
+    top: 0;
   }
   .navbar--inner { height: 64px; }
   .navbar__logo-name { font-size: 16px; letter-spacing: 2px; }
@@ -1386,7 +1387,7 @@ img { display: block; max-width: 100%; }
     height: auto;
     overflow: hidden;
     padding: 32px 20px 28px;
-    background-image: url('https://images.unsplash.com/photo-1520175480921-4edfa2983e0f?w=3840&q=85&fit=crop&auto=format');
+    background-image: url('https://images.unsplash.com/photo-1520175480921-4edfa2983e0f?w=828&q=85&fit=crop&auto=format');
     background-size: cover;
     background-position: center;
   }
