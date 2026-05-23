@@ -1094,6 +1094,9 @@ img { display: block; max-width: 100%; }
   .listings { padding: 80px 120px; }
   .listings__row { gap: 40px; }
   .prop-card { width: calc((100% - 80px) / 3); }
+  .ristorazione__sep { margin: 56px -120px 64px; padding: 48px 120px; }
+  .ristorazione__sep::before,
+  .ristorazione__sep::after { left: 120px; right: 120px; }
 
   .detail-content { padding: 80px 120px; gap: 100px; }
   .detail-title { font-size: 72px; }
