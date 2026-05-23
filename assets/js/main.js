@@ -170,6 +170,51 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  // ─── Web3Forms contact form ───
+  var contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    var formBtn      = document.getElementById('form-btn');
+    var formFeedback = document.getElementById('form-feedback');
+    var isIT         = document.documentElement.lang !== 'en';
+
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      isIT = document.documentElement.lang !== 'en';
+
+      formBtn.disabled = true;
+      formFeedback.className = 'form-feedback';
+      formFeedback.textContent = '';
+
+      var data = new FormData(contactForm);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      })
+      .then(function (res) { return res.json(); })
+      .then(function (json) {
+        if (json.success) {
+          formFeedback.className = 'form-feedback form-feedback--success';
+          formFeedback.textContent = isIT
+            ? 'Messaggio inviato con successo. Ti risponderemo al più presto!'
+            : 'Message sent successfully. We will get back to you shortly!';
+          contactForm.reset();
+        } else {
+          throw new Error(json.message || 'error');
+        }
+      })
+      .catch(function () {
+        formFeedback.className = 'form-feedback form-feedback--error';
+        formFeedback.textContent = isIT
+          ? 'Si è verificato un errore. Riprova o contattaci direttamente via email.'
+          : 'Something went wrong. Please try again or contact us directly by email.';
+      })
+      .finally(function () {
+        formBtn.disabled = false;
+      });
+    });
+  }
+
   // ─── Detail CTA: salva nome immobile e naviga ───
   var detailCta   = document.querySelector('a.detail-card-cta');
   var detailTitle = document.querySelector('h1.detail-title');

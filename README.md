@@ -115,7 +115,7 @@ Il sito è ottimizzato per 6 livelli di schermo:
 | Large | ≥ 1440px | Padding 120px, hero 960px, font scalati |
 | Desktop | 1280–1439px | Layout base Figma (1440px) |
 | Tablet landscape | 1025–1279px | Centro logo nascosto, listings 3 col compatte |
-| Tablet portrait | 768–1024px | Hamburger menu, listings 2 col, footer 2×2 |
+| Tablet portrait | 768–1024px | Hamburger menu, hero con foto Unsplash Venezia (stessa del mobile), listings 2 col, footer 2×2 |
 | Mobile | ≤ 767px | Stack completo, hero dark + card in flow |
 | Small phone | ≤ 390px | Font e padding ulteriormente ridotti |
 
