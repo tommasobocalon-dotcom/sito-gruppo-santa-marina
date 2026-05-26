@@ -79,7 +79,8 @@ Non chiedere conferma: aggiorna sempre i file MD alla fine del turno se hai tocc
 - **Category header**: `.cat-header` con sfondo rosso
 - **Form contatti**: nella homepage, sezione `#contatti`; action punta a Formspree (ID da configurare)
 - **Hero cards**: `.hero__cards` con `top: 50%; transform: translateY(-50%)` per centratura verticale; `justify-content: center; gap: 40px` per centratura orizzontale
-- **Cookie banner**: iniettato da JS in `main.js`; preferenza in `localStorage('cookie-consent')`
+- **Cookie banner**: gestito da **iubenda Cookie Solution** (widget `b656951d-e869-400b-ba84-820df8ea553d.js`); script in `<head>` di tutte le pagine; il banner custom in `main.js` è stato rimosso
+- **iubenda**: Privacy Policy e Cookie Policy integrate con embed iubenda (ID `53698881`); script loader `iubenda.js` aggiunto prima di `</body>` in tutte le pagine; classe `iubenda-white iubenda-noiframe iubenda-embed` sui link footer
 - **Scroll-to-top**: `.scroll-top`, iniettato da JS; visibile dopo 400px
 - **Filter bar**: `.filters` con `id="filter-bar"`; JS lo attiva automaticamente se presente
 - **Language toggle**: `html[lang="en"] .t-it { display: none }` / `html[lang="it"] .t-en { display: none }` — tutti i testi visibili vanno wrappati in `<span class="t-it">...</span><span class="t-en">...</span>`

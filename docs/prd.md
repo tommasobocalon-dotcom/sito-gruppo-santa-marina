@@ -120,6 +120,7 @@ Ancora fuori scope:
 | ID | Requisito | Priorità | Stato |
 |---|---|---|---|
 | RF-10 | Cookie banner GDPR conforme | Alta | ✅ |
+| RF-16 | Privacy Policy e Cookie Policy con iubenda (ID 53698881) | Alta | ✅ |
 | RF-11 | Form contatti collegato a Formspree | Alta | ✅ (ID placeholder) |
 | RF-12 | Google Maps embed sezione contatti | Media | ✅ |
 | RF-13 | Switch lingua IT/EN con persistenza | Alta | ✅ (tutte le 26 pagine dettaglio tradotte) |

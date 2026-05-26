@@ -45,45 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
     AOS.init({ once: true, duration: 700, offset: 60 });
   }
 
-  // ─── Cookie Banner ───
-  // Se l'utente aveva già accettato in una sessione precedente, aggiorna subito il consenso GA
-  if (localStorage.getItem('cookie-consent') === 'all' && typeof gtag === 'function') {
-    gtag('consent', 'update', { 'analytics_storage': 'granted' });
-  }
-
-  if (!localStorage.getItem('cookie-consent')) {
-    var banner = document.createElement('div');
-    banner.className = 'cookie-banner';
-    banner.innerHTML =
-      '<p class="cookie-banner__text">' +
-        '<span class="t-it">Utilizziamo cookie per migliorare la tua esperienza. Leggi la nostra <a href="#">Cookie Policy</a>.</span>' +
-        '<span class="t-en">We use cookies to improve your experience. Read our <a href="#">Cookie Policy</a>.</span>' +
-      '</p>' +
-      '<div class="cookie-banner__actions">' +
-        '<button class="cookie-banner__decline" id="cookie-decline">' +
-          '<span class="t-it">Solo necessari</span><span class="t-en">Necessary only</span>' +
-        '</button>' +
-        '<button class="cookie-banner__accept" id="cookie-accept">' +
-          '<span class="t-it">Accetta tutti</span><span class="t-en">Accept all</span>' +
-        '</button>' +
-      '</div>';
-    document.body.appendChild(banner);
-
-    function dismissBanner(choice) {
-      localStorage.setItem('cookie-consent', choice);
-      banner.style.transition = 'opacity 0.3s';
-      banner.style.opacity = '0';
-      setTimeout(function () { banner.remove(); }, 320);
-    }
-    document.getElementById('cookie-accept').addEventListener('click', function () {
-      if (typeof gtag === 'function') {
-        gtag('consent', 'update', { 'analytics_storage': 'granted' });
-      }
-      dismissBanner('all');
-    });
-    document.getElementById('cookie-decline').addEventListener('click', function () { dismissBanner('necessary'); });
-  }
-
   // ─── Scroll to Top ───
   var scrollBtn = document.createElement('button');
   scrollBtn.className = 'scroll-top';
